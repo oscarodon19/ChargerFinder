@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.author             = { "Oscar Odon" => "oscarodon19@gmail.com" }
+  spec.author             = { 'Oscar Odon' => 'oscarodon19@gmail.com' }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.platform     = :ios
@@ -25,10 +25,9 @@ Pod::Spec.new do |spec|
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.source_files  = "ChargerFinder/**/*.{h,m,swift}"
-  spec.public_header_files = "ChargerFinder/**/*.h"
+  spec.source_files  = 'ChargerFinder/**/*.{h,m,swift}'
+  spec.public_header_files = 'ChargerFinder/**/*.h'
   spec.exclude_files = 'ChargerFinder/*.plist'
-
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
