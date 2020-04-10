@@ -1,0 +1,16 @@
+PODS:
+  - ChargerFinder (0.1.0)
+
+DEPENDENCIES:
+  - ChargerFinder (from `.`)
+
+EXTERNAL SOURCES:
+  ChargerFinder:
+    :path: "."
+
+SPEC CHECKSUMS:
+  ChargerFinder: 5b998ab371be5423b77997d148139c33afc95729
+
+PODFILE CHECKSUM: c43408540745b3840797be0de1567fc415de8e94
+
+COCOAPODS: 1.9.1

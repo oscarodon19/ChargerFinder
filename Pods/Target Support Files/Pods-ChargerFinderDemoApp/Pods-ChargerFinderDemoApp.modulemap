@@ -1,0 +1,6 @@
+framework module Pods_ChargerFinderDemoApp {
+  umbrella header "Pods-ChargerFinderDemoApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.name         = 'ChangerFinder'
+  spec.name         = 'ChargerFinder'
   spec.version      = '0.1.0'
   spec.summary      = 'Electric charger finder app module'
   spec.description  = <<-DESC
@@ -18,15 +18,16 @@ Pod::Spec.new do |spec|
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.platform     = :ios
-  spec.ios.deployment_target = '10.0'
+  spec.ios.deployment_target = '11.3'
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.source       = { :git => 'https://github.com/oscarodon19/ChargerFinder.git', :tag => spec.version.to_s }
+  spec.source       = { :git => 'https://github.com/oscarodon19/ChargerFinder.git', :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.source_files  = "ChargerFinder/**/*"
+  spec.source_files  = "ChargerFinder/**/*.{h,m,swift}"
   spec.public_header_files = "ChargerFinder/**/*.h"
+  spec.exclude_files = 'ChargerFinder/*.plist'
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

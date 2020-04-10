@@ -1,0 +1,33 @@
+{
+  "name": "ChargerFinder",
+  "version": "0.1.0",
+  "summary": "Electric charger finder app module",
+  "description": "Is an electric charger finder app that uses ARKit, Maps, CoreLocation to build an user friendly application.",
+  "homepage": "https://github.com/oscarodon19/ChargerFinder",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Oscar Odon": "oscarodon19@gmail.com"
+  },
+  "platforms": {
+    "ios": "11.3"
+  },
+  "source": {
+    "git": "https://github.com/oscarodon19/ChargerFinder.git",
+    "tag": "0.1.0"
+  },
+  "source_files": "ChargerFinder/**/*.{h,m,swift}",
+  "public_header_files": "ChargerFinder/**/*.h",
+  "exclude_files": "ChargerFinder/*.plist",
+  "frameworks": [
+    "UIKit",
+    "MapKit",
+    "ARKit"
+  ],
+  "swift_versions": [
+    "5.0"
+  ],
+  "swift_version": "5.0"
+}
