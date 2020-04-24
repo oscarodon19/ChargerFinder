@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 //! Project version number for ChargerFinder.
 FOUNDATION_EXPORT double ChargerFinderVersionNumber;
@@ -15,5 +16,3 @@ FOUNDATION_EXPORT double ChargerFinderVersionNumber;
 FOUNDATION_EXPORT const unsigned char ChargerFinderVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <ChargerFinder/PublicHeader.h>
-
-

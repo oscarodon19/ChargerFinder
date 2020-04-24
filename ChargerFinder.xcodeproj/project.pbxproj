@@ -3,17 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		08BFC958ED5342D55AD82F82 /* Pods_ChargerFinderDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D6B93BC59DEF14FBA1BFBB /* Pods_ChargerFinderDemoApp.framework */; };
+		F4585745244D42B100147E84 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F4585744244D42B100147E84 /* Scene.sks */; };
+		F4585747244D432100147E84 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4585746244D432100147E84 /* Scene.swift */; };
+		F458574A244D442F00147E84 /* FindChargersWithARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4585749244D442F00147E84 /* FindChargersWithARViewController.swift */; };
+		F458574C24524A6900147E84 /* SwiftJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458574B24524A6900147E84 /* SwiftJSON.swift */; };
+		F458575024524C6000147E84 /* ProgrammaticallyLayoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458574F24524C6000147E84 /* ProgrammaticallyLayoutable.swift */; };
+		F4585753245254CB00147E84 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4585752245254CB00147E84 /* StringExtension.swift */; };
+		F4585756245255B500147E84 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4585755245255B500147E84 /* Math.swift */; };
+		F4585759245261D900147E84 /* Coordintaor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4585758245261D900147E84 /* Coordintaor.swift */; };
+		F458575B2452622F00147E84 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458575A2452622F00147E84 /* AppCoordinator.swift */; };
+		F458576424526BB900147E84 /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458576324526BB900147E84 /* MainViewCoordinator.swift */; };
 		F4D56B902440E76100A4B8C0 /* ChargerFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D56B862440E76100A4B8C0 /* ChargerFinder.framework */; };
 		F4D56B952440E76100A4B8C0 /* ChargerFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D56B942440E76100A4B8C0 /* ChargerFinderTests.swift */; };
 		F4D56B972440E76100A4B8C0 /* ChargerFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = F4D56B892440E76100A4B8C0 /* ChargerFinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4D56BA72440E93E00A4B8C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D56BA62440E93E00A4B8C0 /* AppDelegate.swift */; };
-		F4D56BAB2440E93E00A4B8C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D56BAA2440E93E00A4B8C0 /* ViewController.swift */; };
-		F4D56BAE2440E93E00A4B8C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D56BAC2440E93E00A4B8C0 /* Main.storyboard */; };
+		F4D56BAB2440E93E00A4B8C0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D56BAA2440E93E00A4B8C0 /* MainViewController.swift */; };
 		F4D56BB02440E94200A4B8C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4D56BAF2440E94200A4B8C0 /* Assets.xcassets */; };
 		F4D56BB32440E94200A4B8C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D56BB12440E94200A4B8C0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -32,6 +41,16 @@
 		17AD538FB06E7C7D4C672FA3 /* Pods-ChargerFinderDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChargerFinderDemoApp.release.xcconfig"; path = "Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		C184F77155F36FF8D146A756 /* Pods-ChargerFinderDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChargerFinderDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D2D6B93BC59DEF14FBA1BFBB /* Pods_ChargerFinderDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChargerFinderDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4585744244D42B100147E84 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
+		F4585746244D432100147E84 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		F4585749244D442F00147E84 /* FindChargersWithARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindChargersWithARViewController.swift; sourceTree = "<group>"; };
+		F458574B24524A6900147E84 /* SwiftJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftJSON.swift; sourceTree = "<group>"; };
+		F458574F24524C6000147E84 /* ProgrammaticallyLayoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticallyLayoutable.swift; sourceTree = "<group>"; };
+		F4585752245254CB00147E84 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		F4585755245255B500147E84 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		F4585758245261D900147E84 /* Coordintaor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordintaor.swift; sourceTree = "<group>"; };
+		F458575A2452622F00147E84 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F458576324526BB900147E84 /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
 		F4D56B862440E76100A4B8C0 /* ChargerFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChargerFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D56B892440E76100A4B8C0 /* ChargerFinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChargerFinder.h; sourceTree = "<group>"; };
 		F4D56B8A2440E76100A4B8C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,8 +59,7 @@
 		F4D56B962440E76100A4B8C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4D56BA42440E93E00A4B8C0 /* ChargerFinderDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChargerFinderDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D56BA62440E93E00A4B8C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F4D56BAA2440E93E00A4B8C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F4D56BAD2440E93E00A4B8C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4D56BAA2440E93E00A4B8C0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F4D56BAF2440E94200A4B8C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4D56BB22440E94200A4B8C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4D56BB42440E94200A4B8C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +109,88 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F454E7F724527DDC00C02E44 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F45857402443F17E00147E84 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F45857412443F19B00147E84 /* FindChargersWithAR */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F45857412443F19B00147E84 /* FindChargersWithAR */ = {
+			isa = PBXGroup;
+			children = (
+				F4585748244D43F100147E84 /* ViewController */,
+				F4585744244D42B100147E84 /* Scene.sks */,
+				F4585746244D432100147E84 /* Scene.swift */,
+			);
+			path = FindChargersWithAR;
+			sourceTree = "<group>";
+		};
+		F4585748244D43F100147E84 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F4585749244D442F00147E84 /* FindChargersWithARViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F458574D24524C1000147E84 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F458574F24524C6000147E84 /* ProgrammaticallyLayoutable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F4585751245254A200147E84 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F4585752245254CB00147E84 /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F45857542452559E00147E84 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F4585755245255B500147E84 /* Math.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F4585757245261C200147E84 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F4585758245261D900147E84 /* Coordintaor.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F4585761245265BC00147E84 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				F458575A2452622F00147E84 /* AppCoordinator.swift */,
+				F458576324526BB900147E84 /* MainViewCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		F458576224526A6200147E84 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4D56BAA2440E93E00A4B8C0 /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		F4D56B7C2440E76100A4B8C0 = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +216,14 @@
 		F4D56B882440E76100A4B8C0 /* ChargerFinder */ = {
 			isa = PBXGroup;
 			children = (
+				F4585757245261C200147E84 /* Coordinator */,
+				F45857542452559E00147E84 /* Helpers */,
+				F4585751245254A200147E84 /* Extensions */,
+				F458574D24524C1000147E84 /* Protocols */,
+				F45857402443F17E00147E84 /* Scenes */,
 				F4D56B892440E76100A4B8C0 /* ChargerFinder.h */,
 				F4D56B8A2440E76100A4B8C0 /* Info.plist */,
+				F458574B24524A6900147E84 /* SwiftJSON.swift */,
 			);
 			path = ChargerFinder;
 			sourceTree = "<group>";
@@ -134,9 +240,10 @@
 		F4D56BA52440E93E00A4B8C0 /* ChargerFinderDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				F454E7F724527DDC00C02E44 /* Extensions */,
+				F458576224526A6200147E84 /* Controllers */,
+				F4585761245265BC00147E84 /* Coordinators */,
 				F4D56BA62440E93E00A4B8C0 /* AppDelegate.swift */,
-				F4D56BAA2440E93E00A4B8C0 /* ViewController.swift */,
-				F4D56BAC2440E93E00A4B8C0 /* Main.storyboard */,
 				F4D56BAF2440E94200A4B8C0 /* Assets.xcassets */,
 				F4D56BB12440E94200A4B8C0 /* LaunchScreen.storyboard */,
 				F4D56BB42440E94200A4B8C0 /* Info.plist */,
@@ -202,6 +309,7 @@
 				F4D56BA02440E93E00A4B8C0 /* Sources */,
 				F4D56BA12440E93E00A4B8C0 /* Frameworks */,
 				F4D56BA22440E93E00A4B8C0 /* Resources */,
+				B1C5B4649202DC00CB41853F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,6 +332,7 @@
 				TargetAttributes = {
 					F4D56B852440E76100A4B8C0 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 					F4D56B8E2440E76100A4B8C0 = {
 						CreatedOnToolsVersion = 11.4;
@@ -258,6 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4585745244D42B100147E84 /* Scene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +384,6 @@
 			files = (
 				F4D56BB32440E94200A4B8C0 /* LaunchScreen.storyboard in Resources */,
 				F4D56BB02440E94200A4B8C0 /* Assets.xcassets in Resources */,
-				F4D56BAE2440E93E00A4B8C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +412,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B1C5B4649202DC00CB41853F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -310,6 +436,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4585747244D432100147E84 /* Scene.swift in Sources */,
+				F458574C24524A6900147E84 /* SwiftJSON.swift in Sources */,
+				F4585753245254CB00147E84 /* StringExtension.swift in Sources */,
+				F458575024524C6000147E84 /* ProgrammaticallyLayoutable.swift in Sources */,
+				F4585759245261D900147E84 /* Coordintaor.swift in Sources */,
+				F458574A244D442F00147E84 /* FindChargersWithARViewController.swift in Sources */,
+				F4585756245255B500147E84 /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +458,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4D56BAB2440E93E00A4B8C0 /* ViewController.swift in Sources */,
+				F458576424526BB900147E84 /* MainViewCoordinator.swift in Sources */,
+				F458575B2452622F00147E84 /* AppCoordinator.swift in Sources */,
+				F4D56BAB2440E93E00A4B8C0 /* MainViewController.swift in Sources */,
 				F4D56BA72440E93E00A4B8C0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,14 +476,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F4D56BAC2440E93E00A4B8C0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F4D56BAD2440E93E00A4B8C0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F4D56BB12440E94200A4B8C0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -483,6 +610,7 @@
 		F4D56B9B2440E76100A4B8C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9P94BC28FM;
@@ -491,6 +619,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ChargerFinder/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,14 +628,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.oscarodon.ChargerFinder;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		F4D56B9C2440E76100A4B8C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9P94BC28FM;
@@ -515,6 +647,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ChargerFinder/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -523,14 +656,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.oscarodon.ChargerFinder;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		F4D56B9E2440E76100A4B8C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9P94BC28FM;
 				INFOPLIST_FILE = ChargerFinderTests/Info.plist;
@@ -549,6 +684,7 @@
 		F4D56B9F2440E76100A4B8C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9P94BC28FM;
 				INFOPLIST_FILE = ChargerFinderTests/Info.plist;
@@ -572,7 +708,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9P94BC28FM;
 				INFOPLIST_FILE = "$(SRCROOT)/ChargerFinderDemoApp/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -592,7 +728,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9P94BC28FM;
 				INFOPLIST_FILE = "$(SRCROOT)/ChargerFinderDemoApp/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

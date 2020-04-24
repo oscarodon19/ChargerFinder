@@ -6,22 +6,24 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		795D2F5D968DAF3B4C394FF9A959C3D3 /* ChargerFinder */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = C8C3A8D6BB32D2873882B012B3AA81CC /* Build configuration list for PBXAggregateTarget "ChargerFinder" */;
-			buildPhases = (
-			);
-			dependencies = (
-			);
-			name = ChargerFinder;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		030949B26DFEBBE33C687E1F35DE721A /* Pods-ChargerFinderDemoApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC94A6236E6EE8D3A79CAD2A8B711082 /* Pods-ChargerFinderDemoApp-dummy.m */; };
-		471194A47EBD4606C8F4C02120D1C2F7 /* Pods-ChargerFinderDemoApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F2CDEEED8DE1E666D25DC7941AD7B3E /* Pods-ChargerFinderDemoApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8C4B37C6ABD775AE3B5BB6A6817B60AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		030949B26DFEBBE33C687E1F35DE721A /* Pods-ChargerFinderDemoApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F1481B0AA132DBBA43ABC5D8C57E1B /* Pods-ChargerFinderDemoApp-dummy.m */; };
+		062E2C4C56BC0788B1A1FCEF05A1D1CE /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E737951A019E1C0DB335CE6079F075A /* StringExtension.swift */; };
+		0BDB3984D5E8BDA0F80F49EE85FBC5DE /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08367C6827780EF541A0C840FFD89291 /* Scene.swift */; };
+		23E0A68A01AB76CD84BCF31012A7C9C5 /* ChargerFinder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABB1F74CDACFE1882200B5BB30E4BEE /* ChargerFinder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E6F8B4FC98CE162EDE1F88B05CAFE04 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670BA983BB2A1F8E547A682CDB98C094 /* ARKit.framework */; };
+		471194A47EBD4606C8F4C02120D1C2F7 /* Pods-ChargerFinderDemoApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77C34D1B8EB0691B59B6B130413B0F4A /* Pods-ChargerFinderDemoApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5230F36A17EE9D5371CA38DE4F6B3019 /* SwiftJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05722D9370F66BC9311A090706785166 /* SwiftJSON.swift */; };
+		5C0C3B7ADB8C076186228AB4BB31A33D /* ChargerFinder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C30BE42FB1DF2F2CC5E5F58017455CC7 /* ChargerFinder-dummy.m */; };
+		8C4B37C6ABD775AE3B5BB6A6817B60AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF2C4C5308111F8C6FC2972F79E50B8 /* Foundation.framework */; };
+		9D267E37CAFDA6BAE77D79677A70744E /* Coordintaor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59492C4A4CC07A5D82B0EFFDB4F3672 /* Coordintaor.swift */; };
+		A0180A04EDC297F8C536FB023C9B7486 /* FindChargersWithARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC3EA47A0294AA5171F5CEAF188F97D /* FindChargersWithARViewController.swift */; };
+		B4CE19C504D8A45877E2FC19079C700E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF562CEA64671FAD0C4DC5C4C82E793 /* MapKit.framework */; };
+		C8B2398C3E2B2741B02BDC84473F317C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30EADDA0ADFC60C6A9A65F28AAA2693 /* UIKit.framework */; };
+		D0AC6652D79D02B1E55FADAEFCB6FFC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF2C4C5308111F8C6FC2972F79E50B8 /* Foundation.framework */; };
+		E299361A34B49BEE277A728A7104D341 /* ProgrammaticallyLayoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9275D7751780B480762C234F846EBB6A /* ProgrammaticallyLayoutable.swift */; };
+		E72B2E9E014ECAF19CE98F1DB4D6DBF7 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3BF66D6985651559E70F0C1B81487 /* Math.swift */; };
+		FB2F51372432A9020D166C13C5D4EAA3 /* ChargerFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 623A3E0B83541361411BB48BF8399F65 /* ChargerFinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,25 +37,53 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F2CDEEED8DE1E666D25DC7941AD7B3E /* Pods-ChargerFinderDemoApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChargerFinderDemoApp-umbrella.h"; sourceTree = "<group>"; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3891CEFEEC78E0701DF839C70B4B7715 /* Pods-ChargerFinderDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChargerFinderDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
-		6485315B1F1ACC7DE6DB9A5C3788484A /* Pods-ChargerFinderDemoApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChargerFinderDemoApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		05722D9370F66BC9311A090706785166 /* SwiftJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftJSON.swift; path = ChargerFinder/SwiftJSON.swift; sourceTree = "<group>"; };
+		08367C6827780EF541A0C840FFD89291 /* Scene.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		0E737951A019E1C0DB335CE6079F075A /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		1259AF0C992643F7AAD54A32683D2134 /* Pods-ChargerFinderDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChargerFinderDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		1CF2C4C5308111F8C6FC2972F79E50B8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		20F1481B0AA132DBBA43ABC5D8C57E1B /* Pods-ChargerFinderDemoApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChargerFinderDemoApp-dummy.m"; sourceTree = "<group>"; };
+		21230FAA37945E8FD25465CCB7F8960D /* ChargerFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChargerFinder.debug.xcconfig; sourceTree = "<group>"; };
+		278D94DD8F4272B32458FB2ABA9E87A2 /* Pods-ChargerFinderDemoApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChargerFinderDemoApp-Info.plist"; sourceTree = "<group>"; };
+		3AA925EB5D914B523FD78E137E581845 /* ChargerFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChargerFinder.release.xcconfig; sourceTree = "<group>"; };
+		3ABB1F74CDACFE1882200B5BB30E4BEE /* ChargerFinder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChargerFinder-umbrella.h"; sourceTree = "<group>"; };
+		42E3BF66D6985651559E70F0C1B81487 /* Math.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		4482AC47B16D6712C308A81C3D2FA1D7 /* ChargerFinder-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ChargerFinder-Info.plist"; sourceTree = "<group>"; };
+		5D88588DC1745701CF2256265BEA087E /* ChargerFinder.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ChargerFinder.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		623A3E0B83541361411BB48BF8399F65 /* ChargerFinder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChargerFinder.h; path = ChargerFinder/ChargerFinder.h; sourceTree = "<group>"; };
+		670BA983BB2A1F8E547A682CDB98C094 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/ARKit.framework; sourceTree = DEVELOPER_DIR; };
+		71CD60F7E4EB5E11AE0B6F8DCE608850 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		777D03F28DCFD0D73DD350EF21D897CC /* Pods_ChargerFinderDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ChargerFinderDemoApp.framework; path = "Pods-ChargerFinderDemoApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8813D510815DB153B81DAE255D457AA2 /* Pods-ChargerFinderDemoApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChargerFinderDemoApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		8B17A024A11361D8EC75B094EE3BD4E4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		77C34D1B8EB0691B59B6B130413B0F4A /* Pods-ChargerFinderDemoApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChargerFinderDemoApp-umbrella.h"; sourceTree = "<group>"; };
+		87BA3AC0B25C09BD92D486370940FBED /* Pods-ChargerFinderDemoApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ChargerFinderDemoApp.modulemap"; sourceTree = "<group>"; };
+		8A367AF505655ABEB6FE5601E2EDEC43 /* Pods-ChargerFinderDemoApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChargerFinderDemoApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		9275D7751780B480762C234F846EBB6A /* ProgrammaticallyLayoutable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProgrammaticallyLayoutable.swift; sourceTree = "<group>"; };
+		9A6B125A5E2760995AF8B5800EFABEE8 /* ChargerFinder.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ChargerFinder.modulemap; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B39F1A1183BAA75BF81283488A3CAB71 /* Pods-ChargerFinderDemoApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChargerFinderDemoApp-Info.plist"; sourceTree = "<group>"; };
-		BC94A6236E6EE8D3A79CAD2A8B711082 /* Pods-ChargerFinderDemoApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChargerFinderDemoApp-dummy.m"; sourceTree = "<group>"; };
-		D02A939CA1E111BD9195563A1379B400 /* Pods-ChargerFinderDemoApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ChargerFinderDemoApp.modulemap"; sourceTree = "<group>"; };
-		D564312B6AB8E1646B96BAFC5659DE6D /* ChargerFinder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChargerFinder.h; path = ChargerFinder/ChargerFinder.h; sourceTree = "<group>"; };
-		D84E29AB29816B5198EAB10221A2D9F6 /* Pods-ChargerFinderDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChargerFinderDemoApp.release.xcconfig"; sourceTree = "<group>"; };
-		E1FF4BECCFE1F4361608ABDC949CC459 /* ChargerFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChargerFinder.release.xcconfig; sourceTree = "<group>"; };
-		EC948E86E6C2374B0784F76261860E9B /* ChargerFinder.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ChargerFinder.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		ECF3DFB9AD291A93FECC827442C6EA4A /* ChargerFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChargerFinder.debug.xcconfig; sourceTree = "<group>"; };
+		A6BFECDDDC860B56DF532453848367F6 /* Pods-ChargerFinderDemoApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChargerFinderDemoApp-frameworks.sh"; sourceTree = "<group>"; };
+		ABC3EA47A0294AA5171F5CEAF188F97D /* FindChargersWithARViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FindChargersWithARViewController.swift; sourceTree = "<group>"; };
+		B30EADDA0ADFC60C6A9A65F28AAA2693 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B693F68E4657F6BDCCE986B38FD06CCB /* ChargerFinder-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChargerFinder-prefix.pch"; sourceTree = "<group>"; };
+		BAEB538843FC104F98393C8B3666E4D2 /* ChargerFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ChargerFinder.framework; path = ChargerFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C30BE42FB1DF2F2CC5E5F58017455CC7 /* ChargerFinder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ChargerFinder-dummy.m"; sourceTree = "<group>"; };
+		C59492C4A4CC07A5D82B0EFFDB4F3672 /* Coordintaor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Coordintaor.swift; sourceTree = "<group>"; };
+		CEF562CEA64671FAD0C4DC5C4C82E793 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		CF792D2807B36DD07F060E3977DF07F4 /* Pods-ChargerFinderDemoApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChargerFinderDemoApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EB38470CB8982629077002680BFD7E5A /* Pods-ChargerFinderDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChargerFinderDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		14CB3C72266E8A6C75FE79A59ED09237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E6F8B4FC98CE162EDE1F88B05CAFE04 /* ARKit.framework in Frameworks */,
+				D0AC6652D79D02B1E55FADAEFCB6FFC8 /* Foundation.framework in Frameworks */,
+				B4CE19C504D8A45877E2FC19079C700E /* MapKit.framework in Frameworks */,
+				C8B2398C3E2B2741B02BDC84473F317C /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C60A7D5289C625CAE19055D0F947AC41 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,101 +95,181 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		35B657405A6843616E1D50F9883E128B /* Pod */ = {
+		1AD1152BA7098A867377E83F557B6E59 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				EC948E86E6C2374B0784F76261860E9B /* ChargerFinder.podspec */,
-				8B17A024A11361D8EC75B094EE3BD4E4 /* LICENSE */,
+				C59492C4A4CC07A5D82B0EFFDB4F3672 /* Coordintaor.swift */,
 			);
-			name = Pod;
+			name = Coordinator;
+			path = ChargerFinder/Coordinator;
 			sourceTree = "<group>";
 		};
-		49216A9651625D5A10EB243DE0AF367A /* ChargerFinder */ = {
+		3FFD6975B11751F329EB0246E2363171 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D564312B6AB8E1646B96BAFC5659DE6D /* ChargerFinder.h */,
-				35B657405A6843616E1D50F9883E128B /* Pod */,
-				5ADBD527B7AD134580CC319D5697894A /* Support Files */,
+				ABC3EA47A0294AA5171F5CEAF188F97D /* FindChargersWithARViewController.swift */,
 			);
-			name = ChargerFinder;
-			path = ..;
+			name = ViewController;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
-		511A9C1D38366B9BF8C6FBD383B65D40 /* Development Pods */ = {
+		5B88B3B26F5F51FF2ACA6497F03D6695 /* FindChargersWithAR */ = {
 			isa = PBXGroup;
 			children = (
-				49216A9651625D5A10EB243DE0AF367A /* ChargerFinder */,
+				08367C6827780EF541A0C840FFD89291 /* Scene.swift */,
+				3FFD6975B11751F329EB0246E2363171 /* ViewController */,
 			);
-			name = "Development Pods";
+			name = FindChargersWithAR;
+			path = FindChargersWithAR;
 			sourceTree = "<group>";
 		};
-		5ADBD527B7AD134580CC319D5697894A /* Support Files */ = {
+		99868C66D08D34AB385281C61957BC26 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				ECF3DFB9AD291A93FECC827442C6EA4A /* ChargerFinder.debug.xcconfig */,
-				E1FF4BECCFE1F4361608ABDC949CC459 /* ChargerFinder.release.xcconfig */,
+				D82A61B8D3A1EF627ED761861CF6E2EA /* Pods-ChargerFinderDemoApp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9B44E378468FF810E3B5D09B44E35E3B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A6B125A5E2760995AF8B5800EFABEE8 /* ChargerFinder.modulemap */,
+				C30BE42FB1DF2F2CC5E5F58017455CC7 /* ChargerFinder-dummy.m */,
+				4482AC47B16D6712C308A81C3D2FA1D7 /* ChargerFinder-Info.plist */,
+				B693F68E4657F6BDCCE986B38FD06CCB /* ChargerFinder-prefix.pch */,
+				3ABB1F74CDACFE1882200B5BB30E4BEE /* ChargerFinder-umbrella.h */,
+				21230FAA37945E8FD25465CCB7F8960D /* ChargerFinder.debug.xcconfig */,
+				3AA925EB5D914B523FD78E137E581845 /* ChargerFinder.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Pods/Target Support Files/ChargerFinder";
 			sourceTree = "<group>";
 		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+		9D6DA6FC48FA35D7140D92EE6BB28538 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+				5B88B3B26F5F51FF2ACA6497F03D6695 /* FindChargersWithAR */,
+			);
+			name = Scenes;
+			path = ChargerFinder/Scenes;
+			sourceTree = "<group>";
+		};
+		A70A8EC5CDACA302747F62AD719BE044 /* ChargerFinder */ = {
+			isa = PBXGroup;
+			children = (
+				623A3E0B83541361411BB48BF8399F65 /* ChargerFinder.h */,
+				05722D9370F66BC9311A090706785166 /* SwiftJSON.swift */,
+				1AD1152BA7098A867377E83F557B6E59 /* Coordinator */,
+				E2D36306C7AF05F0EE79F94D3CAA5BDC /* Extensions */,
+				B95EDB578137763A5284BF8BF631A2A5 /* Helpers */,
+				C72F289F8A4BBFAB356B92DC1A0AB7E9 /* Pod */,
+				C791C18580DBBD4A5E4D10428B12E0CB /* Protocols */,
+				9D6DA6FC48FA35D7140D92EE6BB28538 /* Scenes */,
+				9B44E378468FF810E3B5D09B44E35E3B /* Support Files */,
+			);
+			name = ChargerFinder;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		A8FD4EA8949D9615970F2E1CF17AB1A0 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A70A8EC5CDACA302747F62AD719BE044 /* ChargerFinder */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		B95EDB578137763A5284BF8BF631A2A5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				42E3BF66D6985651559E70F0C1B81487 /* Math.swift */,
+			);
+			name = Helpers;
+			path = ChargerFinder/Helpers;
+			sourceTree = "<group>";
+		};
+		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAA6C446359FDBFD74C401846E0D8839 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BAA6C446359FDBFD74C401846E0D8839 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				670BA983BB2A1F8E547A682CDB98C094 /* ARKit.framework */,
+				1CF2C4C5308111F8C6FC2972F79E50B8 /* Foundation.framework */,
+				CEF562CEA64671FAD0C4DC5C4C82E793 /* MapKit.framework */,
+				B30EADDA0ADFC60C6A9A65F28AAA2693 /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		C64B029BA24B91E1C746DDCA25856300 /* Products */ = {
+		C72F289F8A4BBFAB356B92DC1A0AB7E9 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				777D03F28DCFD0D73DD350EF21D897CC /* Pods_ChargerFinderDemoApp.framework */,
+				5D88588DC1745701CF2256265BEA087E /* ChargerFinder.podspec */,
+				71CD60F7E4EB5E11AE0B6F8DCE608850 /* LICENSE */,
 			);
-			name = Products;
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		C791C18580DBBD4A5E4D10428B12E0CB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9275D7751780B480762C234F846EBB6A /* ProgrammaticallyLayoutable.swift */,
+			);
+			name = Protocols;
+			path = ChargerFinder/Protocols;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				511A9C1D38366B9BF8C6FBD383B65D40 /* Development Pods */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				C64B029BA24B91E1C746DDCA25856300 /* Products */,
-				D7D56629B4E1F2966F20388B676D2586 /* Targets Support Files */,
+				A8FD4EA8949D9615970F2E1CF17AB1A0 /* Development Pods */,
+				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
+				D239B6562FB42FF7F385344223397E9D /* Products */,
+				99868C66D08D34AB385281C61957BC26 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		D239B6562FB42FF7F385344223397E9D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+				BAEB538843FC104F98393C8B3666E4D2 /* ChargerFinder.framework */,
+				777D03F28DCFD0D73DD350EF21D897CC /* Pods_ChargerFinderDemoApp.framework */,
 			);
-			name = Frameworks;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		D7D56629B4E1F2966F20388B676D2586 /* Targets Support Files */ = {
+		D82A61B8D3A1EF627ED761861CF6E2EA /* Pods-ChargerFinderDemoApp */ = {
 			isa = PBXGroup;
 			children = (
-				DE57A23DA14DA35803AF79089C3A98B7 /* Pods-ChargerFinderDemoApp */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		DE57A23DA14DA35803AF79089C3A98B7 /* Pods-ChargerFinderDemoApp */ = {
-			isa = PBXGroup;
-			children = (
-				D02A939CA1E111BD9195563A1379B400 /* Pods-ChargerFinderDemoApp.modulemap */,
-				6485315B1F1ACC7DE6DB9A5C3788484A /* Pods-ChargerFinderDemoApp-acknowledgements.markdown */,
-				8813D510815DB153B81DAE255D457AA2 /* Pods-ChargerFinderDemoApp-acknowledgements.plist */,
-				BC94A6236E6EE8D3A79CAD2A8B711082 /* Pods-ChargerFinderDemoApp-dummy.m */,
-				B39F1A1183BAA75BF81283488A3CAB71 /* Pods-ChargerFinderDemoApp-Info.plist */,
-				2F2CDEEED8DE1E666D25DC7941AD7B3E /* Pods-ChargerFinderDemoApp-umbrella.h */,
-				3891CEFEEC78E0701DF839C70B4B7715 /* Pods-ChargerFinderDemoApp.debug.xcconfig */,
-				D84E29AB29816B5198EAB10221A2D9F6 /* Pods-ChargerFinderDemoApp.release.xcconfig */,
+				87BA3AC0B25C09BD92D486370940FBED /* Pods-ChargerFinderDemoApp.modulemap */,
+				CF792D2807B36DD07F060E3977DF07F4 /* Pods-ChargerFinderDemoApp-acknowledgements.markdown */,
+				8A367AF505655ABEB6FE5601E2EDEC43 /* Pods-ChargerFinderDemoApp-acknowledgements.plist */,
+				20F1481B0AA132DBBA43ABC5D8C57E1B /* Pods-ChargerFinderDemoApp-dummy.m */,
+				A6BFECDDDC860B56DF532453848367F6 /* Pods-ChargerFinderDemoApp-frameworks.sh */,
+				278D94DD8F4272B32458FB2ABA9E87A2 /* Pods-ChargerFinderDemoApp-Info.plist */,
+				77C34D1B8EB0691B59B6B130413B0F4A /* Pods-ChargerFinderDemoApp-umbrella.h */,
+				1259AF0C992643F7AAD54A32683D2134 /* Pods-ChargerFinderDemoApp.debug.xcconfig */,
+				EB38470CB8982629077002680BFD7E5A /* Pods-ChargerFinderDemoApp.release.xcconfig */,
 			);
 			name = "Pods-ChargerFinderDemoApp";
 			path = "Target Support Files/Pods-ChargerFinderDemoApp";
+			sourceTree = "<group>";
+		};
+		E2D36306C7AF05F0EE79F94D3CAA5BDC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0E737951A019E1C0DB335CE6079F075A /* StringExtension.swift */,
+			);
+			name = Extensions;
+			path = ChargerFinder/Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,9 +283,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		91709D3E57F37D3F36199605FFB1929B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23E0A68A01AB76CD84BCF31012A7C9C5 /* ChargerFinder-umbrella.h in Headers */,
+				FB2F51372432A9020D166C13C5D4EAA3 /* ChargerFinder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		795D2F5D968DAF3B4C394FF9A959C3D3 /* ChargerFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E579F5EDCC86223879CE6CE8C40A7B78 /* Build configuration list for PBXNativeTarget "ChargerFinder" */;
+			buildPhases = (
+				91709D3E57F37D3F36199605FFB1929B /* Headers */,
+				7268E7A7354B0C9996C162D0F1B5BE83 /* Sources */,
+				14CB3C72266E8A6C75FE79A59ED09237 /* Frameworks */,
+				A34224980FBD08ACEBFF0D5F2CCBD155 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChargerFinder;
+			productName = ChargerFinder;
+			productReference = BAEB538843FC104F98393C8B3666E4D2 /* ChargerFinder.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		9DF2C2BD27DF8104EA2AF4E69D5F23B3 /* Pods-ChargerFinderDemoApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5D8E37A8496D93214CD8D541E93CC6D /* Build configuration list for PBXNativeTarget "Pods-ChargerFinderDemoApp" */;
@@ -213,7 +350,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = C64B029BA24B91E1C746DDCA25856300 /* Products */;
+			productRefGroup = D239B6562FB42FF7F385344223397E9D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -224,6 +361,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A34224980FBD08ACEBFF0D5F2CCBD155 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AACD7D6C9E3DD9257B15F8AB11B9D6C2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,6 +378,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7268E7A7354B0C9996C162D0F1B5BE83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C0C3B7ADB8C076186228AB4BB31A33D /* ChargerFinder-dummy.m in Sources */,
+				9D267E37CAFDA6BAE77D79677A70744E /* Coordintaor.swift in Sources */,
+				A0180A04EDC297F8C536FB023C9B7486 /* FindChargersWithARViewController.swift in Sources */,
+				E72B2E9E014ECAF19CE98F1DB4D6DBF7 /* Math.swift in Sources */,
+				E299361A34B49BEE277A728A7104D341 /* ProgrammaticallyLayoutable.swift in Sources */,
+				0BDB3984D5E8BDA0F80F49EE85FBC5DE /* Scene.swift in Sources */,
+				062E2C4C56BC0788B1A1FCEF05A1D1CE /* StringExtension.swift in Sources */,
+				5230F36A17EE9D5371CA38DE4F6B3019 /* SwiftJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C63F81506F91F24CC60966F956309795 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,7 +415,7 @@
 /* Begin XCBuildConfiguration section */
 		3C06EC699C6E2D41E66748667B42FC7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D84E29AB29816B5198EAB10221A2D9F6 /* Pods-ChargerFinderDemoApp.release.xcconfig */;
+			baseConfigurationReference = EB38470CB8982629077002680BFD7E5A /* Pods-ChargerFinderDemoApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -353,23 +512,6 @@
 			};
 			name = Release;
 		};
-		50050CC508FFE58C801BAFA628ABC42E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECF3DFB9AD291A93FECC827442C6EA4A /* ChargerFinder.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		A8EFA68AC855A5B2B43BF716E27BD98D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -434,9 +576,46 @@
 			};
 			name = Debug;
 		};
+		B595348BA26A3A3E7075A8E9433CC2F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AA925EB5D914B523FD78E137E581845 /* ChargerFinder.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ChargerFinder/ChargerFinder-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ChargerFinder/ChargerFinder-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ChargerFinder/ChargerFinder.modulemap";
+				PRODUCT_MODULE_NAME = ChargerFinder;
+				PRODUCT_NAME = ChargerFinder;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		C463EBBB8033E2E64108A3A3E7AD0683 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3891CEFEEC78E0701DF839C70B4B7715 /* Pods-ChargerFinderDemoApp.debug.xcconfig */;
+			baseConfigurationReference = 1259AF0C992643F7AAD54A32683D2134 /* Pods-ChargerFinderDemoApp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -472,23 +651,41 @@
 			};
 			name = Debug;
 		};
-		E0E540AD4478BE941E13C930BC1F9C92 /* Release */ = {
+		E533FD8D494798BA358293285B398093 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1FF4BECCFE1F4361608ABDC949CC459 /* ChargerFinder.release.xcconfig */;
+			baseConfigurationReference = 21230FAA37945E8FD25465CCB7F8960D /* ChargerFinder.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ChargerFinder/ChargerFinder-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ChargerFinder/ChargerFinder-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
+				MODULEMAP_FILE = "Target Support Files/ChargerFinder/ChargerFinder.modulemap";
+				PRODUCT_MODULE_NAME = ChargerFinder;
+				PRODUCT_NAME = ChargerFinder;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -502,11 +699,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C8C3A8D6BB32D2873882B012B3AA81CC /* Build configuration list for PBXAggregateTarget "ChargerFinder" */ = {
+		E579F5EDCC86223879CE6CE8C40A7B78 /* Build configuration list for PBXNativeTarget "ChargerFinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50050CC508FFE58C801BAFA628ABC42E /* Debug */,
-				E0E540AD4478BE941E13C930BC1F9C92 /* Release */,
+				E533FD8D494798BA358293285B398093 /* Debug */,
+				B595348BA26A3A3E7075A8E9433CC2F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
