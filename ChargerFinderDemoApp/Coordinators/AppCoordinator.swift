@@ -17,7 +17,7 @@ class AppCoordinator: Coordinator {
     
     func start() {
         let rootViewController = UINavigationController(rootViewController: UIViewController())
-        rootViewController.navigationBar
+        rootViewController.setTranslucentNavigationBar()
         let mainCoordinator = MainViewCoordinator(
             parentCoordinator: self,
             rootViewController: rootViewController

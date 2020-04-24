@@ -18,6 +18,8 @@
 		F4585759245261D900147E84 /* Coordintaor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4585758245261D900147E84 /* Coordintaor.swift */; };
 		F458575B2452622F00147E84 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458575A2452622F00147E84 /* AppCoordinator.swift */; };
 		F458576424526BB900147E84 /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458576324526BB900147E84 /* MainViewCoordinator.swift */; };
+		F469630024528109001B58D9 /* UINavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46962FF24528108001B58D9 /* UINavigationBarExtension.swift */; };
+		F4696302245282C1001B58D9 /* UINAvigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4696301245282C1001B58D9 /* UINAvigationControllerExtension.swift */; };
 		F4D56B902440E76100A4B8C0 /* ChargerFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D56B862440E76100A4B8C0 /* ChargerFinder.framework */; };
 		F4D56B952440E76100A4B8C0 /* ChargerFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D56B942440E76100A4B8C0 /* ChargerFinderTests.swift */; };
 		F4D56B972440E76100A4B8C0 /* ChargerFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = F4D56B892440E76100A4B8C0 /* ChargerFinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,6 +53,8 @@
 		F4585758245261D900147E84 /* Coordintaor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordintaor.swift; sourceTree = "<group>"; };
 		F458575A2452622F00147E84 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F458576324526BB900147E84 /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
+		F46962FF24528108001B58D9 /* UINavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarExtension.swift; sourceTree = "<group>"; };
+		F4696301245282C1001B58D9 /* UINAvigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINAvigationControllerExtension.swift; sourceTree = "<group>"; };
 		F4D56B862440E76100A4B8C0 /* ChargerFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChargerFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D56B892440E76100A4B8C0 /* ChargerFinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChargerFinder.h; sourceTree = "<group>"; };
 		F4D56B8A2440E76100A4B8C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 		F454E7F724527DDC00C02E44 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F46962FF24528108001B58D9 /* UINavigationBarExtension.swift */,
+				F4696301245282C1001B58D9 /* UINAvigationControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -461,7 +467,9 @@
 				F458576424526BB900147E84 /* MainViewCoordinator.swift in Sources */,
 				F458575B2452622F00147E84 /* AppCoordinator.swift in Sources */,
 				F4D56BAB2440E93E00A4B8C0 /* MainViewController.swift in Sources */,
+				F4696302245282C1001B58D9 /* UINAvigationControllerExtension.swift in Sources */,
 				F4D56BA72440E93E00A4B8C0 /* AppDelegate.swift in Sources */,
+				F469630024528109001B58D9 /* UINavigationBarExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
