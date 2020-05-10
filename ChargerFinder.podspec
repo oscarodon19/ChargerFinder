@@ -38,7 +38,8 @@ Pod::Spec.new do |spec|
   #
 
   # spec.resource  = "icon.png"
-  # spec.resources = "Resources/*.png"
+  # spec.resources = "ChargerFinder/**/*.{sks,png,storyboard}"
+  # spec.resource_bundles = {'Resources' => ['ChargerFinder/Resources/**/*.{sks,png,storyboard}']}
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -48,7 +49,8 @@ Pod::Spec.new do |spec|
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.swift_version = ['5.0']
+  spec.static_framework = true
+  spec.dependency 'Firebase/Database'
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
 
 end

@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     
     private lazy var findChargersButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Find chargers with AR", for: .normal)
+        button.setTitle("Go to charger finder", for: .normal)
         button.addTarget(self, action: #selector(handleFindChargerButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -34,7 +34,9 @@ class MainViewController: UIViewController {
         setupView()
     }
     
-    @objc func handleFindChargerButtonTapped(sender: UIButton) {}
+    @objc func handleFindChargerButtonTapped(sender: UIButton) {
+        coordinator.handleChargerFinderPush()
+    }
 }
 
 extension MainViewController: ProgrammaticallyLayoutable {

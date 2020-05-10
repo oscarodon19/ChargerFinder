@@ -29,5 +29,11 @@
   "swift_versions": [
     "5.0"
   ],
+  "static_framework": true,
+  "dependencies": {
+    "Firebase/Database": [
+
+    ]
+  },
   "swift_version": "5.0"
 }

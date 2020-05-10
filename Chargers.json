@@ -1,0 +1,123 @@
+{
+    "chargers": {
+            "334519" : {
+              "address" : "Jose Ingenieros 2801-2899, San Isidro, Buenos Aires",
+              "availability" : "Available",
+              "coordinates" : {
+                "latitude" : -34.474307,
+                "longitude" : -58.555163
+              },
+              "description" : "A description",
+              "high_power" : false,
+              "inUse" : true,
+              "location_type" : "Residential location",
+              "name" : "Chargeboxnet office",
+              "payment" : "Required",
+              "plug_score" : "5",
+              "plug_type" : "CHAdeMO",
+              "solar_powered" : true,
+              "state" : "Enabled"
+            },
+            "417975" : {
+              "address" : "Av. Santa Fe 1550, Martinez, Buenos Aires",
+              "availability" : "Available",
+              "coordinates" : {
+                "latitude" : -34.486844,
+                "longitude" : -58.501625
+              },
+              "description" : "A description",
+              "high_power" : true,
+              "inUse" : false,
+              "location_type" : "Public location",
+              "name" : "Nissan AutoFerro - Sucursal Martinez",
+              "payment" : "Free",
+              "plug_score" : "4",
+              "plug_type" : "J-1772",
+              "solar_powered" : true,
+              "state" : "Enabled"
+            },
+            "513741" : {
+              "address" : "Echeverria 3750, Munro, Buenos Aires, Argentina",
+              "availability" : "Not Available",
+              "coordinates" : {
+                "latitude" : -34.514986,
+                "longitude" : -58.523779
+              },
+              "description" : "A description",
+              "high_power" : true,
+              "inUse" : false,
+              "location_type" : "Public location",
+              "name" : "A name",
+              "payment" : "Free",
+              "plug_score" : "0",
+              "plug_type" : "Type 2",
+              "solar_powered" : false,
+              "state" : "Coming soon"
+            }        
+    },
+    "state" : {
+        "enabled" : "Enabled",
+        "under_repair" : "Under repair",
+        "coming_soon" : "Coming soon"
+    },
+    "availability" : {
+        "available" : "Available",
+        "not_available" : "Not Available",
+        "reserved" : "Reserved"
+    },
+    "location_type" : {
+        "residential" : "Residential location",
+        "restricted" : "Restricted location",
+        "public" : "Public location"
+    },
+    "payment" : {
+       "required" : "Required",
+       "free" : "Free" 
+    },
+    "plug_type" : [
+        {
+            "id" : "1",
+            "name" : "Supercharger"
+        },
+        {
+            "id" : "2",
+            "name" : "CSS/SAE"
+        },
+        {
+            "id" : "3",
+            "name" : "CHAdeMO"
+        },
+        {
+            "id" : "4",
+            "name" : "J-1772"
+        },
+        {
+            "id" : "5",
+            "name" : "Tesla"
+        },
+        {
+            "id" : "6",
+            "name" : "Tesla (Roadster)"
+        },
+        {
+            "id" : "7",
+            "name" : "Type 2"
+        },
+        {
+            "id" : "8",
+            "name" : "Three Phase"
+        },
+        {
+            "id" : "9",
+            "name" : "Caravan Mains Socket"
+        },
+        {
+            "id" : "10",
+            "name" : "Comando"
+        },
+        {
+            "id" : "11",
+            "name" : "Wall (Type I)"
+        }
+    ]
+}

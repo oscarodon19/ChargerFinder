@@ -8,8 +8,12 @@
 
 import ChargerFinder
 
-protocol MainViewCoordinatorProtocol: AnyObject, Coordinator {}
-protocol MainViewCoordinatorScapeHandler: Coordinator {}
+protocol MainViewCoordinatorProtocol: AnyObject, Coordinator {
+    func handleChargerFinderPush()
+}
+protocol MainViewCoordinatorScapeHandler: Coordinator {
+    func handleChargerFinderNavigation()
+}
 
 class MainViewCoordinator: MainViewCoordinatorProtocol {
     private let parentCoordinator: MainViewCoordinatorScapeHandler
@@ -23,5 +27,9 @@ class MainViewCoordinator: MainViewCoordinatorProtocol {
     func start() {
         let mainViewController = MainViewController(coordinator: self)
         self.rootViewController?.setViewControllers([mainViewController], animated: false)
+    }
+    
+    func handleChargerFinderPush() {
+        parentCoordinator.handleChargerFinderNavigation()
     }
 }
