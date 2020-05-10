@@ -8,11 +8,11 @@
 import UIKit
 
 public extension UIView {
-     func setSystemBackground() {
+    func setSystemBackgroundColor() {
         if #available(iOS 13.0, *) {
-            self.backgroundColor = .systemBackground
+            backgroundColor = .systemBackground
         } else {
-            self.backgroundColor = .white
+            backgroundColor = .white
         }
     }
 }

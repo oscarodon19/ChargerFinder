@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.source_files  = 'ChargerFinder/**/*.{h,m,swift}'
   spec.public_header_files = 'ChargerFinder/**/*.h'
-  spec.exclude_files = 'ChargerFinder/*.plist'
+  #spec.exclude_files = 'ChargerFinder/*.plist'
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -37,9 +37,8 @@ Pod::Spec.new do |spec|
   #  non-essential files like tests, examples and documentation.
   #
 
-  # spec.resource  = "icon.png"
-  # spec.resources = "ChargerFinder/**/*.{sks,png,storyboard}"
-  # spec.resource_bundles = {'Resources' => ['ChargerFinder/Resources/**/*.{sks,png,storyboard}']}
+  #spec.resources = "ChargerFinder/**/*.{xcassets}"
+  spec.resource_bundles = {'Resources' => ['ChargerFinder/Resources/**/*.{xcassets,strings}']}
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 

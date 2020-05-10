@@ -18,12 +18,27 @@ class FindChargersInMapViewController: UIViewController {
     
     private let coordinator: FindChargersInMapCoordinator
     private var presenter: FindChargersInMapPresenterProtocol
-    private let regionInMeters: Double = 10000
+    private let regionInMeters: Double = 1000
+    
+    private lazy var stackView: UIStackView = {
+        let view = UIStackView()
+        view.axis = .vertical
+        view.distribution = .fillProportionally
+        view.isLayoutMarginsRelativeArrangement = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
 
     private lazy var mapView: MKMapView = {
-        let mapView = MKMapView()
-        mapView.translatesAutoresizingMaskIntoConstraints = false
-        return mapView
+        let view = MKMapView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private lazy var tableView: UITableView = {
+        let view = UITableView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     init(coordinator: FindChargersInMapCoordinator, presenter: FindChargersInMapPresenterProtocol) {
@@ -52,7 +67,9 @@ extension FindChargersInMapViewController: FindChargersInMapViewControllerDelega
     }
     
     func userDidNotAuthorizeLocation() {
-        //TODO: Show alert letting the user know they have to turn this on
+        let alert = UIAlertController(title: "Location Access Required", message: "We need location access permits to use maps features", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dissmiss", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     func didChangeLocation(with coordinates: CLLocationCoordinate2D) {
@@ -63,19 +80,22 @@ extension FindChargersInMapViewController: FindChargersInMapViewControllerDelega
 
 extension FindChargersInMapViewController: ProgrammaticallyLayoutable {
     func setupViewHierarchy() {
-        view.addSubview(mapView)
+        stackView.addArrangedSubview(mapView)
+        view.addSubview(stackView)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            mapView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            mapView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.37),
-            mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            mapView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.37)
         ])
     }
     
     func setupAditionalConfigurations() {
-        view.setSystemBackground()
+        view.setSystemBackgroundColor()
+        navigationItem.title = "Charger Finder"
     }
 }

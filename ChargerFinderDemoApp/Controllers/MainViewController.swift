@@ -52,7 +52,7 @@ extension MainViewController: ProgrammaticallyLayoutable {
     }
     
     func setupAditionalConfigurations() {
-        view.backgroundColor = .white
+        view.setSystemBackgroundColor()
     }
 }
 
