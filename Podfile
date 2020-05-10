@@ -7,3 +7,7 @@ target 'ChargerFinderDemoApp' do
    pod 'Firebase/Database', :inhibit_warnings => true
    pod 'Firebase/Auth', :inhibit_warnings => true
 end
+
+target :ChargerFinderTests do
+   pod 'ChargerFinder', :path => '.'
+end 

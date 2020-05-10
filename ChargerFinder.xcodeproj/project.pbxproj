@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84238FC374414CDD42FB8922 /* Pods_ChargerFinderDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE4475B14697B7C2B8F9336 /* Pods_ChargerFinderDemoApp.framework */; };
+		55B639C80207D0B4F022E7D1 /* Pods_ChargerFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392E04453297E6C9E6AEFF3 /* Pods_ChargerFinderTests.framework */; };
+		58E9064E9FD1F75C8FEE699D /* Pods_ChargerFinderDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99140BC8B3918EBBE8C3F3DC /* Pods_ChargerFinderDemoApp.framework */; };
 		F44D187A245F2C9E006F49B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F44D1879245F2C9E006F49B6 /* GoogleService-Info.plist */; };
 		F458574A244D442F00147E84 /* FindChargersWithARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4585749244D442F00147E84 /* FindChargersWithARViewController.swift */; };
 		F458574C24524A6900147E84 /* SwiftJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458574B24524A6900147E84 /* SwiftJSON.swift */; };
@@ -21,7 +22,7 @@
 		F4696302245282C1001B58D9 /* UINAvigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4696301245282C1001B58D9 /* UINAvigationControllerExtension.swift */; };
 		F4696304245501FC001B58D9 /* ChargerFinderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4696303245501FC001B58D9 /* ChargerFinderCoordinator.swift */; };
 		F4696306245507B8001B58D9 /* FindChargersWithARCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4696305245507B8001B58D9 /* FindChargersWithARCoordinator.swift */; };
-		F469636B2455F277001B58D9 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F469636B2455F277001B58D9 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F47D4E9424675D60006E0399 /* FindChargersInMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D4E9324675D60006E0399 /* FindChargersInMapViewController.swift */; };
 		F47D4E952467621E006E0399 /* ChargerFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D56B862440E76100A4B8C0 /* ChargerFinder.framework */; };
 		F47D4E962467621E006E0399 /* ChargerFinder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4D56B862440E76100A4B8C0 /* ChargerFinder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -66,7 +67,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F469636B2455F277001B58D9 /* BuildFile in Embed Frameworks */,
+				F469636B2455F277001B58D9 /* (null) in Embed Frameworks */,
 				F47D4E962467621E006E0399 /* ChargerFinder.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -75,9 +76,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0DE4475B14697B7C2B8F9336 /* Pods_ChargerFinderDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChargerFinderDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D8B68EBA0CAED74CD4FB11A /* Pods-ChargerFinderDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChargerFinderDemoApp.release.xcconfig"; path = "Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp.release.xcconfig"; sourceTree = "<group>"; };
-		6B2914DAB4C74A2D9BA2E876 /* Pods-ChargerFinderDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChargerFinderDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		19C24662280DA42562DEF59A /* Pods-ChargerFinderDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChargerFinderDemoApp.release.xcconfig"; path = "Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		257397DB81E0011C8255B5E1 /* Pods-ChargerFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChargerFinderTests.debug.xcconfig"; path = "Target Support Files/Pods-ChargerFinderTests/Pods-ChargerFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		311E3E80EA82173536E6E7D9 /* Pods-ChargerFinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChargerFinderTests.release.xcconfig"; path = "Target Support Files/Pods-ChargerFinderTests/Pods-ChargerFinderTests.release.xcconfig"; sourceTree = "<group>"; };
+		8392E04453297E6C9E6AEFF3 /* Pods_ChargerFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChargerFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99140BC8B3918EBBE8C3F3DC /* Pods_ChargerFinderDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChargerFinderDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5F6CEE76BC6FCB02322317D /* Pods-ChargerFinderDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChargerFinderDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F44D1879245F2C9E006F49B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F4585749244D442F00147E84 /* FindChargersWithARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindChargersWithARViewController.swift; sourceTree = "<group>"; };
 		F458574B24524A6900147E84 /* SwiftJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftJSON.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D56B902440E76100A4B8C0 /* ChargerFinder.framework in Frameworks */,
+				55B639C80207D0B4F022E7D1 /* Pods_ChargerFinderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F47D4E952467621E006E0399 /* ChargerFinder.framework in Frameworks */,
-				84238FC374414CDD42FB8922 /* Pods_ChargerFinderDemoApp.framework in Frameworks */,
+				58E9064E9FD1F75C8FEE699D /* Pods_ChargerFinderDemoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,8 +152,10 @@
 		3391CF580F7C2AA8B8FDB352 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6B2914DAB4C74A2D9BA2E876 /* Pods-ChargerFinderDemoApp.debug.xcconfig */,
-				5D8B68EBA0CAED74CD4FB11A /* Pods-ChargerFinderDemoApp.release.xcconfig */,
+				A5F6CEE76BC6FCB02322317D /* Pods-ChargerFinderDemoApp.debug.xcconfig */,
+				19C24662280DA42562DEF59A /* Pods-ChargerFinderDemoApp.release.xcconfig */,
+				257397DB81E0011C8255B5E1 /* Pods-ChargerFinderTests.debug.xcconfig */,
+				311E3E80EA82173536E6E7D9 /* Pods-ChargerFinderTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -157,7 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				F46963682455F265001B58D9 /* ChargerFinder.framework */,
-				0DE4475B14697B7C2B8F9336 /* Pods_ChargerFinderDemoApp.framework */,
+				99140BC8B3918EBBE8C3F3DC /* Pods_ChargerFinderDemoApp.framework */,
+				8392E04453297E6C9E6AEFF3 /* Pods_ChargerFinderTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -368,9 +376,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4D56B9D2440E76100A4B8C0 /* Build configuration list for PBXNativeTarget "ChargerFinderTests" */;
 			buildPhases = (
+				AC00664BBFC4646F2A2A91DE /* [CP] Check Pods Manifest.lock */,
 				F4D56B8B2440E76100A4B8C0 /* Sources */,
 				F4D56B8C2440E76100A4B8C0 /* Frameworks */,
 				F4D56B8D2440E76100A4B8C0 /* Resources */,
+				EFC6F39F172D608C347BEC5A /* [CP] Embed Pods Frameworks */,
+				127FCE02746730BC6B860359 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -386,13 +397,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4D56BCB2440E94200A4B8C0 /* Build configuration list for PBXNativeTarget "ChargerFinderDemoApp" */;
 			buildPhases = (
-				266D14269D02C8E9CFCE0223 /* [CP] Check Pods Manifest.lock */,
+				E3E07AD867FDFA59A97DFE16 /* [CP] Check Pods Manifest.lock */,
 				F4D56BA02440E93E00A4B8C0 /* Sources */,
 				F4D56BA12440E93E00A4B8C0 /* Frameworks */,
 				F4D56BA22440E93E00A4B8C0 /* Resources */,
 				F46963652455F247001B58D9 /* Embed Frameworks */,
-				F0E961E4326F45876672EC77 /* [CP] Embed Pods Frameworks */,
-				731B49B4C9489505D92DFAB7 /* [CP] Copy Pods Resources */,
+				E2C241B0FDAE9F818D1B1E6F /* [CP] Embed Pods Frameworks */,
+				A111F9C78FBEE6E26C5E3FEE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -475,7 +486,80 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		266D14269D02C8E9CFCE0223 /* [CP] Check Pods Manifest.lock */ = {
+		127FCE02746730BC6B860359 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderTests/Pods-ChargerFinderTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderTests/Pods-ChargerFinderTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderTests/Pods-ChargerFinderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A111F9C78FBEE6E26C5E3FEE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC00664BBFC4646F2A2A91DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChargerFinderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2C241B0FDAE9F818D1B1E6F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3E07AD867FDFA59A97DFE16 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -497,38 +581,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		731B49B4C9489505D92DFAB7 /* [CP] Copy Pods Resources */ = {
+		EFC6F39F172D608C347BEC5A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F0E961E4326F45876672EC77 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderTests/Pods-ChargerFinderTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderTests/Pods-ChargerFinderTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderDemoApp/Pods-ChargerFinderDemoApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderTests/Pods-ChargerFinderTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -787,6 +854,7 @@
 		};
 		F4D56B9E2440E76100A4B8C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 257397DB81E0011C8255B5E1 /* Pods-ChargerFinderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -806,6 +874,7 @@
 		};
 		F4D56B9F2440E76100A4B8C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 311E3E80EA82173536E6E7D9 /* Pods-ChargerFinderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -825,7 +894,7 @@
 		};
 		F4D56BCC2440E94200A4B8C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B2914DAB4C74A2D9BA2E876 /* Pods-ChargerFinderDemoApp.debug.xcconfig */;
+			baseConfigurationReference = A5F6CEE76BC6FCB02322317D /* Pods-ChargerFinderDemoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -846,7 +915,7 @@
 		};
 		F4D56BCD2440E94200A4B8C0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D8B68EBA0CAED74CD4FB11A /* Pods-ChargerFinderDemoApp.release.xcconfig */;
+			baseConfigurationReference = 19C24662280DA42562DEF59A /* Pods-ChargerFinderDemoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

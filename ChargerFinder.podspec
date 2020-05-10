@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.source_files  = 'ChargerFinder/**/*.{h,m,swift}'
   spec.public_header_files = 'ChargerFinder/**/*.h'
-  #spec.exclude_files = 'ChargerFinder/*.plist'
+  spec.exclude_files = 'ChargerFinder/*.plist'
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -49,5 +49,11 @@ Pod::Spec.new do |spec|
   spec.static_framework = true
   spec.dependency 'Firebase/Database'
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+
+  # ――― Test Configuration ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  spec.test_spec "ChargerFinderTests" do |test_spec|
+    test_spec.frameworks = 'XCTest'
+    test_spec.source_files = 'ChargerFinderTests/**/*.{h,m,swift}', 'ChargerFinder/**/*.{h,m,swift}'
+  end  
 
 end
