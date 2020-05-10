@@ -36,9 +36,7 @@ Pod::Spec.new do |spec|
   #  You can preserve files from being cleaned, please don't preserve
   #  non-essential files like tests, examples and documentation.
   #
-
-  #spec.resources = "ChargerFinder/**/*.{xcassets}"
-  spec.resource_bundles = {'Resources' => ['ChargerFinder/Resources/**/*.{xcassets,strings}']}
+  spec.resource_bundles = {'ChargerFinder' => ['ChargerFinder/**/*.{png,jpg,jpeg,xcassets,strings,json}']}
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 

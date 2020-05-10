@@ -27,5 +27,4 @@ public class ChargerFinderCoordinator: ChargerFinderCoordinatorProtocol {
     }
 }
 
-extension ChargerFinderCoordinator: FindChargersWithARCoordinatorEscapeHandler {}
 extension ChargerFinderCoordinator: FindChargersInMapCoordinatorEscapeHandler {}

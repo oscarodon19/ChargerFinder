@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol FindChargersInMapCoordinatorProtocol: AnyObject, Coordinator {}
+protocol FindChargersInMapCoordinatorProtocol: AnyObject, Coordinator {
+    func didTapAugmentedRealityViewButton()
+}
 protocol FindChargersInMapCoordinatorEscapeHandler: Coordinator {}
 
 class FindChargersInMapCoordinator: FindChargersInMapCoordinatorProtocol {
@@ -25,4 +27,13 @@ class FindChargersInMapCoordinator: FindChargersInMapCoordinatorProtocol {
         let viewController = FindChargersInMapViewController(coordinator: self, presenter: presenter)
         rootViewController?.pushViewController(viewController, animated: true)
     }
+    
+    func didTapAugmentedRealityViewButton() {
+        guard let navigationController = rootViewController else { return }
+        let findChargersWithARCoordinator = FindChargersWithARCoordinator(parentCoordinator: self, rootViewController: navigationController)
+        findChargersWithARCoordinator.start()
+    }
 }
+
+extension FindChargersInMapCoordinator: FindChargersWithARCoordinatorEscapeHandler {}
+

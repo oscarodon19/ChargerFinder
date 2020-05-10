@@ -61,10 +61,6 @@ class FindChargersWithARViewController: UIViewController {
         super.viewWillAppear(animated)
         sceneView.session.pause()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }
 
 // MARK: - ProgramaticallyLayoutable
