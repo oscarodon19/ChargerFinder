@@ -1,6 +1,0 @@
-framework module ChargerFinder {
-  umbrella header "ChargerFinder-umbrella.h"
-
-  export *
-  module * { export * }
-}
