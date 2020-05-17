@@ -5,6 +5,7 @@
 //  Created by Oscar Odon on 10/05/2020.
 //  Copyright © 2020 Oscar Odon. All rights reserved.
 //
+import Foundation
 
 final class ChargerFinderBundle {
     static let resourceBundle: Bundle = {

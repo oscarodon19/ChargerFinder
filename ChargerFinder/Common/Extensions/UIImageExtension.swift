@@ -6,7 +6,7 @@
 //  Copyright © 2020 Oscar Odon. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum AssetIdentifier: String {
     case augmentedRealityIcon = "augmented_reality"

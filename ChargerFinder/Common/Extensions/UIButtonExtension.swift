@@ -6,7 +6,7 @@
 //  Copyright © 2020 Oscar Odon. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UIButton {
     func setImage(withIdentifier assetIdentifier: AssetIdentifier) {

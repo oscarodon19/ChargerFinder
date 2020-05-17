@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 protocol FindChargersInMapCoordinatorProtocol: AnyObject, Coordinator {
     func didTapAugmentedRealityViewButton()
@@ -23,7 +24,9 @@ class FindChargersInMapCoordinator: FindChargersInMapCoordinatorProtocol {
     }
     
     public func start() {
-        let presenter = FindChargersInMapPresenter()
+        let service = ChargersService()
+        let locationManager = CLLocationManager()
+        let presenter = FindChargersInMapPresenter(service: service, locationManager: locationManager)
         let viewController = FindChargersInMapViewController(coordinator: self, presenter: presenter)
         rootViewController?.pushViewController(viewController, animated: true)
     }

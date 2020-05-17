@@ -47,7 +47,9 @@ Pod::Spec.new do |spec|
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.swift_version = ['5.0']
   spec.static_framework = true
+  spec.dependency 'Firebase/Core'
   spec.dependency 'Firebase/Database'
+  spec.dependency 'Firebase/Auth'
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
   # ――― Test Configuration ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

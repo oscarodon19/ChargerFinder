@@ -16,8 +16,15 @@ protocol FindChargersInMapPresenterProtocol: AnyObject {
 
 class FindChargersInMapPresenter: NSObject {
     weak private var viewDelegate: FindChargersInMapViewControllerDelegate?
-    private let locationManager = CLLocationManager()
+    private let service: ChargersService
+    private let locationManager: CLLocationManager
     
+    init(service: ChargersService, locationManager: CLLocationManager) {
+        self.service = service
+        self.locationManager = locationManager
+        super.init()
+        service.setDelegate(self)
+    }
 }
 
 extension FindChargersInMapPresenter {
@@ -40,13 +47,21 @@ extension FindChargersInMapPresenter {
     }
 }
 
+extension FindChargersInMapPresenter: ChargersServiceDelegate {
+    func dataDidChange(_ data: [Charger]) {
+        viewDelegate?.didFinishLoadingData(data)
+    }
+}
+
 extension FindChargersInMapPresenter: FindChargersInMapPresenterProtocol {
     func setViewDelegate(_ delegate: FindChargersInMapViewControllerDelegate) {
         viewDelegate = delegate
     }
     
     func viewDidStart() {
+        viewDelegate?.didStartLoadingData()
         setupLocationManager()
+        service.fetchChargersData()
     }
 }
 

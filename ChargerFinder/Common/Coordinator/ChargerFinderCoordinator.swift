@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol ChargerFinderCoordinatorProtocol: AnyObject, Coordinator {}
 public protocol ChargerFinderCoordinatorEscapeHandler: Coordinator {}

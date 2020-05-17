@@ -12,16 +12,19 @@ protocol FindChargersInMapViewControllerDelegate: AnyObject {
     func userDidAuthorizeLocation(_ coordinates: CLLocationCoordinate2D)
     func userDidNotAuthorizeLocation()
     func didChangeLocation(with coordinates: CLLocationCoordinate2D)
+    func didStartLoadingData()
+    func didFinishLoadingData(_ data: [Charger])
 }
 
-class FindChargersInMapViewController: UIViewController {
+class FindChargersInMapViewController: UIViewController, Loadable {
+    //MARK: - Parameters
+    var loadingView: LoadingView?
     private let coordinator: FindChargersInMapCoordinator
     private var presenter: FindChargersInMapPresenterProtocol
-    private let regionInMeters: Double = 1000
-    //TODO: Delete the array below when parse data from firebase
-    private var chargers = ["Charger 1","Charger 2","Changer 3", "Charger 4"]
+    private let regionInMeters: Double = 10000
+    private var chargers = [Charger]()
     
-    
+    //MARK: - UIComponents
     private lazy var stackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
@@ -54,6 +57,7 @@ class FindChargersInMapViewController: UIViewController {
         return view
     }()
     
+    //MARK: - ViewController Lifecycle
     init(coordinator: FindChargersInMapCoordinator, presenter: FindChargersInMapPresenterProtocol) {
         self.coordinator = coordinator
         self.presenter = presenter
@@ -70,9 +74,21 @@ class FindChargersInMapViewController: UIViewController {
         presenter.setViewDelegate(self)
         presenter.viewDidStart()
     }
-    
+}
+
+extension FindChargersInMapViewController {
     @objc private func handleAugmentedRealityButtonTapped() {
         coordinator.didTapAugmentedRealityViewButton()
+    }
+    
+    private func createAnnotations(for chargers: [Charger]) {
+        for charger in chargers {
+            let annotation = MKPointAnnotation()
+            annotation.title = charger.name
+            annotation.subtitle = charger.description
+            annotation.coordinate = CLLocationCoordinate2D(latitude: charger.latitude, longitude: charger.longitude)
+            mapView.addAnnotation(annotation)
+        }
     }
 }
 
@@ -93,6 +109,17 @@ extension FindChargersInMapViewController: FindChargersInMapViewControllerDelega
     func didChangeLocation(with coordinates: CLLocationCoordinate2D) {
         let region = MKCoordinateRegion.init(center: coordinates, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
         mapView.setRegion(region, animated: true)
+    }
+    
+    func didStartLoadingData() {
+        displayLoading()
+    }
+    
+    func didFinishLoadingData(_ data: [Charger]) {
+        chargers = data
+        self.tableView.reloadData()
+        createAnnotations(for: chargers)
+        dismissLoading()
     }
 }
 
@@ -129,7 +156,7 @@ extension FindChargersInMapViewController: ProgrammaticallyLayoutable {
 extension FindChargersInMapViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = chargers[indexPath.section]
+        cell.textLabel?.text = chargers[indexPath.section].name
         return cell
     }
     
