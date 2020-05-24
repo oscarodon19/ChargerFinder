@@ -40,6 +40,7 @@
 		F47D4ED52470CB54006E0399 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F47D4ED42470CB54006E0399 /* GoogleService-Info.plist */; };
 		F47D4ED82470E33D006E0399 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D4ED72470E33D006E0399 /* LoadingView.swift */; };
 		F47D4EDC2470E9B1006E0399 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D4EDB2470E9B1006E0399 /* Loadable.swift */; };
+		F47D4EDE2479D58D006E0399 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D4EDD2479D58D006E0399 /* CustomTableViewCell.swift */; };
 		F4D56B902440E76100A4B8C0 /* ChargerFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D56B862440E76100A4B8C0 /* ChargerFinder.framework */; };
 		F4D56B952440E76100A4B8C0 /* ChargerFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D56B942440E76100A4B8C0 /* ChargerFinderTests.swift */; };
 		F4D56B972440E76100A4B8C0 /* ChargerFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = F4D56B892440E76100A4B8C0 /* ChargerFinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -120,6 +121,7 @@
 		F47D4ED42470CB54006E0399 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F47D4ED72470E33D006E0399 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F47D4EDB2470E9B1006E0399 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		F47D4EDD2479D58D006E0399 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F4D56B862440E76100A4B8C0 /* ChargerFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChargerFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D56B892440E76100A4B8C0 /* ChargerFinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChargerFinder.h; sourceTree = "<group>"; };
 		F4D56B8A2440E76100A4B8C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				F47D4ED72470E33D006E0399 /* LoadingView.swift */,
+				F47D4EDD2479D58D006E0399 /* CustomTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -679,6 +682,7 @@
 				F4696304245501FC001B58D9 /* ChargerFinderCoordinator.swift in Sources */,
 				F458574C24524A6900147E84 /* SwiftJSON.swift in Sources */,
 				F47D4ED22470ADD9006E0399 /* ChargersService.swift in Sources */,
+				F47D4EDE2479D58D006E0399 /* CustomTableViewCell.swift in Sources */,
 				F47D4E9424675D60006E0399 /* FindChargersInMapViewController.swift in Sources */,
 				F4585753245254CB00147E84 /* StringExtension.swift in Sources */,
 				F47D4E9C24678537006E0399 /* FindChargersInMapPresenter.swift in Sources */,

@@ -155,8 +155,9 @@ extension FindChargersInMapViewController: ProgrammaticallyLayoutable {
 //MARK: - TableDataSourceDelegate
 extension FindChargersInMapViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = chargers[indexPath.section].name
+        let title = chargers[indexPath.section].name
+        let detail = chargers[indexPath.section].description
+        let cell = CustomTableViewCell(title: title, detail: detail, style: .subtitle, reuseIdentifier: "cell")
         return cell
     }
     
@@ -169,7 +170,7 @@ extension FindChargersInMapViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 64
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
