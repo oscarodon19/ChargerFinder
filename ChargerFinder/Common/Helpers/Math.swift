@@ -23,13 +23,19 @@ class Math {
     }
     
     /// Returns the difference between the angles formed between two specific locations
-    static func direction(from p1:CLLocation, to p2: CLLocation) -> Double {
+    static func bearing(from p1:CLLocation, to p2: CLLocation) -> Double {
+        var azimuth: Double = 0
         let longitudeDifference = p2.coordinate.longitude - p1.coordinate.longitude
         
         let y = sin(longitudeDifference) * cos(p2.coordinate.longitude)
         let x = cos(p1.coordinate.latitude) * sin(p2.coordinate.latitude) - sin(p1.coordinate.latitude) * cos(p2.coordinate.latitude) * cos(longitudeDifference)
-        let atan_rad = atan2(y, x)
+        let radiansBearing = atan2(y, x)
+        azimuth = transformRadiansToDegrees(radiansBearing)
         
-        return transformRadiansToDegrees(atan_rad)
+        if azimuth < 0 {
+            azimuth += 360
+        }
+        
+        return transformRadiansToDegrees(azimuth)
     }
 }

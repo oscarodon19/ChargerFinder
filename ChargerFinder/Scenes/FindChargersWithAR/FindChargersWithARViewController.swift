@@ -1,8 +1,8 @@
 //
-//  FindChargersWithARViewController.swift
+//  ARViewController.swift
 //  ChargerFinder
 //
-//  Created by Oscar Odon on 19/04/2020.
+//  Created by Oscar Odon on 07/06/2020.
 //  Copyright © 2020 Oscar Odon. All rights reserved.
 //
 
@@ -12,12 +12,11 @@ import CoreLocation
 import GameplayKit
 
 class FindChargersWithARViewController: UIViewController {
-    private let coordinator: FindChargersWithARCoordinator
-    let locationManager = CLLocationManager()
-    var userLocation = CLLocation()
+    private let router: FindChargersWithARRouter
+    private var presenter: FindChargersPresenterProtocol
+    var userLocation: CLLocation
+    var viewModel: [Charger]?
     var userHeading = 0.0
-    var headingStep = 0
-    var sitesJSON : JSON!
     var sites = [UUID : String]()
     
     private lazy var sceneView: ARSKView = {
@@ -25,41 +24,70 @@ class FindChargersWithARViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
-    init(coordinator: FindChargersWithARCoordinator) {
-        self.coordinator = coordinator
+       
+    init(router: FindChargersWithARRouter, presenter: FindChargersPresenterProtocol, userLocation: CLLocation = CLLocation()) {
+        self.router = router
+        self.presenter = presenter
+        self.userLocation = userLocation
         super.init(nibName: nil, bundle: nil)
     }
-    
+        
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+   
     //MARK: - ViewController Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
+        presenter.setViewDelegate(self)
+        presenter.viewDidStart()
         sceneView.delegate = self
         sceneView.showsFPS = true
         sceneView.showsNodeCount = true
-        
+       
         let scene = SKScene(size: view.frame.size)
         sceneView.presentScene(scene)
-        
     }
-        
+       
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let configuration = AROrientationTrackingConfiguration()
         sceneView.session.run(configuration)
     }
-    
+   
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(animated)
         sceneView.session.pause()
+    }
+}
+
+// MARK: - ChargersDisplayable
+
+extension FindChargersWithARViewController: ChargersDisplayable {
+    func displayFetchedChargers(with viewModel: [Charger]) {
+        self.viewModel = viewModel
+    }
+    
+    func userDidAuthorizeLocation(_ coordinates: CLLocationCoordinate2D) {}
+    
+    func userDidNotAuthorizeLocation() {
+        let alert = UIAlertController(title: "Location Access Required", message: "We need location access permits to use maps features", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dissmiss", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func didChangeLocation(with location: CLLocation) {
+        userLocation = location
+    }
+    
+    func didChangeHeading(with newHeading: CLHeading, _ manager: CLLocationManager) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.userHeading = newHeading.magneticHeading
+            manager.stopUpdatingHeading()
+            self.createSites()
+        }
     }
 }
 
@@ -102,82 +130,26 @@ extension FindChargersWithARViewController: ARSKViewDelegate {
         return backgroundNode
     }
     
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        
-    }
+    func session(_ session: ARSession, didFailWithError error: Error) {}
     
-    func sessionWasInterrupted(_ session: ARSession) {
-       
-        
-    }
+    func sessionWasInterrupted(_ session: ARSession) {}
     
-    func sessionInterruptionEnded(_ session: ARSession) {
-       
-        
-    }
-}
-
-// MARK: - CLLocationManagerDelegate
-extension FindChargersWithARViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error.localizedDescription)
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if status == .authorizedWhenInUse {
-            locationManager.requestLocation()
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        userLocation = location
-        
-        DispatchQueue.global().async { [weak self] in
-            guard let self = self else { return }
-            self.updateSites()
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            self.headingStep += 1
-            if self.headingStep < 2 { return }
-            
-            self.userHeading = newHeading.magneticHeading
-            self.locationManager.stopUpdatingHeading()
-            self.createSites()
-        }
-    }
+    func sessionInterruptionEnded(_ session: ARSession) {}
 }
 
 // MARK: - TODO: move this functions to the presenter
 extension FindChargersWithARViewController {
-    func updateSites(){
-        let urlString = "https://es.wikipedia.org/w/api.php?ggscoord=\(userLocation.coordinate.latitude)%7C\(userLocation.coordinate.longitude)&action=query&prop=coordinates%7Cpageimages%7Cpageterms&colimit=50&piprop=thumbnail&pithumbsize=500&pilimit=50&wbptterms=description&generator=geosearch&ggsradius=10000&ggslimit=50&format=json"
-        guard let url = URL(string: urlString) else {return}
-        
-        if let data = try? Data(contentsOf: url){
-            sitesJSON = JSON(data)
-            print(sitesJSON ?? String.empty)
-            locationManager.startUpdatingHeading()
-        }
-        
-    }
-
-
-    func createSites(){
-        //Hacer un bucle de todos los lugares que ocupa el JSON de la Wikipedia
-        for page in sitesJSON["query"]["pages"].dictionaryValue.values {
-            //Ubicar latitud y longitud de esos lugares -> CLLocation
-            let lat = page["coordinates"][0]["lat"].doubleValue
-            let lon = page["coordinates"][0]["lon"].doubleValue
+    func createSites() {
+        guard let chargers = viewModel else { return }
+        for charger in chargers {
+            //Ubicar latitud y longitud de los cargadores -> CLLocation
+            let lat = charger.latitude
+            let lon = charger.longitude
             let location = CLLocation(latitude: lat, longitude: lon)
             
-            //Calcualr la distancia y la dirección (azimut) desde el usuario hasta ese lugar
+            //Calcular la distancia y la dirección (azimut) desde el usuario hasta ese cargador
             let distance = Float(userLocation.distance(from: location))
-            let azimut = Math.direction(from: userLocation, to: location)
+            let azimut = Math.bearing(from: userLocation, to: location)
             
             //Sacar ángulo entre azimut y la dirección del usuario
             let angle = azimut - userHeading
@@ -206,7 +178,7 @@ extension FindChargersWithARViewController {
             
             let anchor = ARAnchor(transform: transform)
             sceneView.session.add(anchor: anchor)
-            sites[anchor.identifier] = "\(page["title"].string!) - \(Int(distance)) metros"
+            sites[anchor.identifier] = "\(charger.name) - \(Int(distance)) metros"
         }
     }
 }

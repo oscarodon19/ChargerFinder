@@ -23,9 +23,9 @@ public class ChargerFinderCoordinator: ChargerFinderCoordinatorProtocol {
     
     public func start() {
         guard let navigationController = rootViewController else { return }
-        let findChargersWithARCoordinator = FindChargersInMapCoordinator(parentCoordinator: self, rootViewController: navigationController)
+        let findChargersWithARCoordinator = FindChargersInMapRouter(parentCoordinator: self, rootViewController: navigationController)
         findChargersWithARCoordinator.start()
     }
 }
 
-extension ChargerFinderCoordinator: FindChargersInMapCoordinatorEscapeHandler {}
+extension ChargerFinderCoordinator: FindChargersInMapRouterEscapeHandler {}

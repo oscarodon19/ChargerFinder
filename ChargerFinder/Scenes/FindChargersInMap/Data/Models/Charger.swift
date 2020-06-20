@@ -27,7 +27,7 @@ struct Charger {
     let solarPowered: Bool
     let state: String
     
-    init(name: String, address: String, availability: String, latitude: Double, longitude: Double, description: String, highPower: Bool, inUse: Bool, locationType: String, payment: String, plugScore: String, plugType: String, solarPowered: Bool, state: String, key: String = "") {
+    init(name: String, address: String, availability: String, latitude: Double, longitude: Double, description: String, highPower: Bool, inUse: Bool, locationType: String, payment: String, plugScore: String, plugType: String, solarPowered: Bool, state: String, key: String = String.empty) {
         self.ref = nil
         self.key = key
         self.name = name

@@ -13,6 +13,10 @@ public protocol ProgrammaticallyLayoutable {
     func setupAditionalConfigurations()
 }
 
+extension ProgrammaticallyLayoutable {
+    func setupAditionalConfigurations() {}
+}
+
 public extension ProgrammaticallyLayoutable {
     func setupView() {
         setupViewHierarchy()

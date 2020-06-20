@@ -8,21 +8,29 @@
 
 import MapKit
 
-protocol FindChargersInMapViewControllerDelegate: AnyObject {
+protocol Locatable: AnyObject {
     func userDidAuthorizeLocation(_ coordinates: CLLocationCoordinate2D)
     func userDidNotAuthorizeLocation()
-    func didChangeLocation(with coordinates: CLLocationCoordinate2D)
-    func didStartLoadingData()
-    func didFinishLoadingData(_ data: [Charger])
+    func didChangeLocation(with location: CLLocation)
+    func didChangeHeading(with newHeading: CLHeading, _ manager: CLLocationManager)
+}
+
+extension Locatable {
+    func didChangeHeading(with newHeading: CLHeading, _ manager: CLLocationManager) {}
+}
+
+protocol ChargersDisplayable: Locatable {
+    func displayFetchedChargers(with viewModel: [Charger])
 }
 
 class FindChargersInMapViewController: UIViewController, Loadable {
     //MARK: - Parameters
     var loadingView: LoadingView?
-    private let coordinator: FindChargersInMapCoordinator
-    private var presenter: FindChargersInMapPresenterProtocol
+    private let router: FindChargersInMapRouterProtocol
+    private var presenter: FindChargersPresenterProtocol
     private let regionInMeters: Double = 10000
     private var chargers = [Charger]()
+    
     
     //MARK: - UIComponents
     private lazy var stackView: UIStackView = {
@@ -58,8 +66,8 @@ class FindChargersInMapViewController: UIViewController, Loadable {
     }()
     
     //MARK: - ViewController Lifecycle
-    init(coordinator: FindChargersInMapCoordinator, presenter: FindChargersInMapPresenterProtocol) {
-        self.coordinator = coordinator
+    init(coordinator: FindChargersInMapRouterProtocol, presenter: FindChargersPresenterProtocol) {
+        self.router = coordinator
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
@@ -73,12 +81,13 @@ class FindChargersInMapViewController: UIViewController, Loadable {
         setupView()
         presenter.setViewDelegate(self)
         presenter.viewDidStart()
+        displayLoading()
     }
 }
 
 extension FindChargersInMapViewController {
     @objc private func handleAugmentedRealityButtonTapped() {
-        coordinator.didTapAugmentedRealityViewButton()
+        router.showAugmentedRealityChargerFinderView()
     }
     
     private func createAnnotations(for chargers: [Charger]) {
@@ -92,8 +101,18 @@ extension FindChargersInMapViewController {
     }
 }
 
-//MARK: - ViewControllerDelegate
-extension FindChargersInMapViewController: FindChargersInMapViewControllerDelegate {
+//MARK: - ChargersDisplayable
+extension FindChargersInMapViewController: ChargersDisplayable {
+    func displayFetchedChargers(with viewModel: [Charger]) {
+        chargers = viewModel
+        self.tableView.reloadData()
+        createAnnotations(for: chargers)
+        dismissLoading()
+    }
+}
+
+//MARK: - Locatable
+extension FindChargersInMapViewController: Locatable {
     func userDidAuthorizeLocation(_ coordinates: CLLocationCoordinate2D) {
         let region = MKCoordinateRegion.init(center: coordinates, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
         mapView.showsUserLocation = true
@@ -106,20 +125,10 @@ extension FindChargersInMapViewController: FindChargersInMapViewControllerDelega
         present(alert, animated: true, completion: nil)
     }
     
-    func didChangeLocation(with coordinates: CLLocationCoordinate2D) {
-        let region = MKCoordinateRegion.init(center: coordinates, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+    func didChangeLocation(with location: CLLocation) {
+        let coordinate = location.coordinate
+        let region = MKCoordinateRegion.init(center: coordinate, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
         mapView.setRegion(region, animated: true)
-    }
-    
-    func didStartLoadingData() {
-        displayLoading()
-    }
-    
-    func didFinishLoadingData(_ data: [Charger]) {
-        chargers = data
-        self.tableView.reloadData()
-        createAnnotations(for: chargers)
-        dismissLoading()
     }
 }
 
