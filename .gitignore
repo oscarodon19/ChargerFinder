@@ -31,5 +31,3 @@ Podfile.lock
 
 Carthage/Build
 
-# Firebase 
-GoogleService-Info.plist
