@@ -13,7 +13,6 @@ class FindChargersWithARPresenter: NSObject {
     weak private var viewDelegate: ChargersDisplayable?
     private let interactor: ChargerBusinessLogic
     private let locationManager: CLLocationManager
-    private var userHeading = 0.0
     private var headingStep = 0
     
     init(interactor: ChargerBusinessLogic, locationManager: CLLocationManager) {

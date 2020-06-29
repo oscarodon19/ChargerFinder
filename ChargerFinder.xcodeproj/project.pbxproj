@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2CAAB5E3DB927224E09EBF11 /* Pods_ChargerFinderDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A773B624771BC4B0D3B8299B /* Pods_ChargerFinderDemoApp.framework */; };
 		59C4781C2C157BDB5C42C02D /* Pods_ChargerFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B7E64FCE603F5F8F9723D2 /* Pods_ChargerFinder.framework */; };
+		754495E30A233BC66EDB98A3 /* Pods_ChargerFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D956DDFB3F6DFA3F9C22A9 /* Pods_ChargerFinderTests.framework */; };
 		F458575024524C6000147E84 /* ProgrammaticallyLayoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458574F24524C6000147E84 /* ProgrammaticallyLayoutable.swift */; };
 		F4585753245254CB00147E84 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4585752245254CB00147E84 /* StringExtension.swift */; };
 		F4585756245255B500147E84 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4585755245255B500147E84 /* Math.swift */; };
@@ -141,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F47D4F0A249E9616006E0399 /* ChargerFinder.framework in Frameworks */,
+				754495E30A233BC66EDB98A3 /* Pods_ChargerFinderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,9 +408,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F47D4F0D249E9616006E0399 /* Build configuration list for PBXNativeTarget "ChargerFinderTests" */;
 			buildPhases = (
+				0B141CFFB4D843315F75C8F3 /* [CP] Check Pods Manifest.lock */,
 				F47D4F01249E9616006E0399 /* Sources */,
 				F47D4F02249E9616006E0399 /* Frameworks */,
 				F47D4F03249E9616006E0399 /* Resources */,
+				46C27EC08B35F0838D300A36 /* [CP] Embed Pods Frameworks */,
+				8D59C92ABC7B1F08CBE61997 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -533,6 +538,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B141CFFB4D843315F75C8F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChargerFinderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		161648F96854DB93C85CD7F6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -572,6 +599,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		46C27EC08B35F0838D300A36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderTests/Pods-ChargerFinderTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderTests/Pods-ChargerFinderTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderTests/Pods-ChargerFinderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		739BF2278E682DADD263E520 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -592,6 +636,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D59C92ABC7B1F08CBE61997 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderTests/Pods-ChargerFinderTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderTests/Pods-ChargerFinderTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChargerFinderTests/Pods-ChargerFinderTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EED7B6A43650FA45E2B122BE /* [CP] Embed Pods Frameworks */ = {
@@ -694,6 +755,7 @@
 /* Begin XCBuildConfiguration section */
 		F47D4F0E249E9616006E0399 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9976C4603A2CB625BA8679B7 /* Pods-ChargerFinderTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9P94BC28FM;
@@ -713,6 +775,7 @@
 		};
 		F47D4F0F249E9616006E0399 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD6C6CE4CD13B6517331CFAD /* Pods-ChargerFinderTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9P94BC28FM;

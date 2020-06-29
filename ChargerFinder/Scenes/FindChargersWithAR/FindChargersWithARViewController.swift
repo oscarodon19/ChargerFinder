@@ -53,6 +53,7 @@ class FindChargersWithARViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let configuration = AROrientationTrackingConfiguration()
+        configuration.worldAlignment = .gravityAndHeading
         sceneView.session.run(configuration)
     }
    
@@ -63,7 +64,6 @@ class FindChargersWithARViewController: UIViewController {
 }
 
 // MARK: - ChargersDisplayable
-
 extension FindChargersWithARViewController: ChargersDisplayable {
     func displayFetchedChargers(with viewModel: [Charger]) {
         self.viewModel = viewModel
@@ -106,8 +106,6 @@ extension FindChargersWithARViewController: ProgrammaticallyLayoutable {
             sceneView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
-    
-    func setupAditionalConfigurations() {}
 }
 
 // MARK: - ARSKViewDelegate
@@ -155,15 +153,15 @@ extension FindChargersWithARViewController {
             let angle = azimut - userHeading
             let angleRad = Math.transformDegreesToRadians(angle)
             
-            //Crear las matrices de rotación para posicionar horizontalmente el ancla
+            //Crea las matrices de rotación para posicionar horizontalmente el ancla
             let horizontalRotation = simd_float4x4(SCNMatrix4MakeRotation(Float(angleRad), 1, 0, 0))
-            //Crear la matriz para la rotación vertical basada en la distancia
+            //Crea la matriz para la rotación vertical basada en la distancia
             let verticalRotation = simd_float4x4(SCNMatrix4MakeRotation(-0.3 + Float(distance/500), 0, 1, 0))
             
-            //Multiplicar las matrices de rotación anteriores y multiplicarlas por la cámara de ARKit
+            //Multiplica las matrices de rotación anteriores y luego multiplica el resultado por la matriz de la cámara de ARKit
             let rotation = simd_mul(horizontalRotation, verticalRotation)
             
-            //Crear una matriz identidad y moverla una cierta cantidad dependiendo de donde posicionar el objeto en profundidad.
+            //Crea una matriz identidad y la mueve una cierta cantidad dependiendo de donde se desea posicionar el objeto en profundidad.
             let sceneView = self.sceneView
 
             guard let currentFrame = sceneView.session.currentFrame else { return }
