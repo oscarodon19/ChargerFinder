@@ -16,6 +16,8 @@
 		F4585759245261D900147E84 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4585758245261D900147E84 /* Coordinator.swift */; };
 		F458575B2452622F00147E84 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458575A2452622F00147E84 /* AppCoordinator.swift */; };
 		F458576424526BB900147E84 /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458576324526BB900147E84 /* MainViewCoordinator.swift */; };
+		F465327D24B2995100B865C8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465327C24B2995100B865C8 /* User.swift */; };
+		F465327F24B29A8300B865C8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465327E24B29A8300B865C8 /* LoginViewController.swift */; };
 		F469630024528109001B58D9 /* UINavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46962FF24528108001B58D9 /* UINavigationBarExtension.swift */; };
 		F4696302245282C1001B58D9 /* UINAvigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4696301245282C1001B58D9 /* UINAvigationControllerExtension.swift */; };
 		F4696304245501FC001B58D9 /* ChargerFinderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4696303245501FC001B58D9 /* ChargerFinderCoordinator.swift */; };
@@ -98,6 +100,8 @@
 		F4585758245261D900147E84 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F458575A2452622F00147E84 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F458576324526BB900147E84 /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
+		F465327C24B2995100B865C8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F465327E24B29A8300B865C8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F46962FF24528108001B58D9 /* UINavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarExtension.swift; sourceTree = "<group>"; };
 		F4696301245282C1001B58D9 /* UINAvigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINAvigationControllerExtension.swift; sourceTree = "<group>"; };
 		F4696303245501FC001B58D9 /* ChargerFinderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerFinderCoordinator.swift; sourceTree = "<group>"; };
@@ -265,12 +269,38 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
-		F458576224526A6200147E84 /* Controllers */ = {
+		F465327A24B2992600B865C8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F465327B24B2993800B865C8 /* Model */,
+				F465327E24B29A8300B865C8 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F465327B24B2993800B865C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F465327C24B2995100B865C8 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F465328024B29A9B00B865C8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F465327A24B2992600B865C8 /* Login */,
+				F465328124B29AB100B865C8 /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F465328124B29AB100B865C8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				F4D56BAA2440E93E00A4B8C0 /* MainViewController.swift */,
 			);
-			path = Controllers;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		F47D4E9224675CEB006E0399 /* FindChargersInMap */ = {
@@ -305,18 +335,18 @@
 			path = Bundle;
 			sourceTree = "<group>";
 		};
-		F47D4ECE2470A0C3006E0399 /* Models */ = {
+		F47D4ECE2470A0C3006E0399 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				F47D4ECF2470A112006E0399 /* Charger.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F47D4ED32470AE19006E0399 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				F47D4ECE2470A0C3006E0399 /* Models */,
+				F47D4ECE2470A0C3006E0399 /* Model */,
 				F47D4ED12470ADD9006E0399 /* ChargersInteractor.swift */,
 			);
 			path = Data;
@@ -378,8 +408,8 @@
 		F4D56BA52440E93E00A4B8C0 /* ChargerFinderDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				F465328024B29A9B00B865C8 /* Scenes */,
 				F454E7F724527DDC00C02E44 /* Extensions */,
-				F458576224526A6200147E84 /* Controllers */,
 				F4585761245265BC00147E84 /* Coordinators */,
 				F4D56BAF2440E94200A4B8C0 /* Assets.xcassets */,
 				F4D56BA62440E93E00A4B8C0 /* AppDelegate.swift */,
@@ -473,7 +503,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Oscar Odon";
 				TargetAttributes = {
 					F47D4F04249E9616006E0399 = {
@@ -690,6 +720,7 @@
 				F4696304245501FC001B58D9 /* ChargerFinderCoordinator.swift in Sources */,
 				F47D4ED22470ADD9006E0399 /* ChargersInteractor.swift in Sources */,
 				F47D4EDE2479D58D006E0399 /* CustomTableViewCell.swift in Sources */,
+				F465327F24B29A8300B865C8 /* LoginViewController.swift in Sources */,
 				F47D4E9424675D60006E0399 /* FindChargersInMapViewController.swift in Sources */,
 				F4585753245254CB00147E84 /* StringExtension.swift in Sources */,
 				F47D4E9C24678537006E0399 /* FindChargersInMapPresenter.swift in Sources */,
@@ -697,6 +728,7 @@
 				F47D4EA724684750006E0399 /* UIColorExtension.swift in Sources */,
 				F47D4EA32467A97C006E0399 /* UIViewExtension.swift in Sources */,
 				F47D4EDC2470E9B1006E0399 /* Loadable.swift in Sources */,
+				F465327D24B2995100B865C8 /* User.swift in Sources */,
 				F47D4E9A2467675E006E0399 /* FidChargersInMapRouter.swift in Sources */,
 				F47D4ED02470A112006E0399 /* Charger.swift in Sources */,
 				F4585759245261D900147E84 /* Coordinator.swift in Sources */,
@@ -920,7 +952,7 @@
 			baseConfigurationReference = 8343FA6421FE68AF3933F41A /* Pods-ChargerFinder.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9P94BC28FM;
@@ -952,7 +984,7 @@
 			baseConfigurationReference = C160B625CADBD8FC38EE518A /* Pods-ChargerFinder.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9P94BC28FM;
