@@ -6,8 +6,11 @@
 //  Copyright © 2020 Oscar Odon. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ChargerDetailViewController: UIViewController {
-    
+    private lazy var chargerTitle: UILabel = {
+        let label = UILabel()
+        return label
+    }()
 }
