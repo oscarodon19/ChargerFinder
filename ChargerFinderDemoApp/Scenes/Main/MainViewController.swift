@@ -10,7 +10,7 @@ import UIKit
 import ChargerFinder
 
 class MainViewController: UIViewController {
-    private let coordinator: MainViewCoordinator
+    private let coordinator: MainViewRouter
     
     private lazy var findChargersButton: UIButton = {
         let button = UIButton(type: .system)
@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
         return button
     }()
     
-    init(coordinator: MainViewCoordinator) {
+    init(coordinator: MainViewRouter) {
         self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }

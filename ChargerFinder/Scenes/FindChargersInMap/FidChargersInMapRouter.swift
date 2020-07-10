@@ -9,15 +9,21 @@
 import UIKit
 import CoreLocation
 
-protocol FindChargersInMapRouterProtocol: AnyObject, Coordinator {
+protocol FindChargersInMapRouterProtocol: AnyObject, Router {
     func showAugmentedRealityChargerFinderView()
 }
 
-protocol FindChargersInMapRouterEscapeHandler: Coordinator {}
+protocol FindChargersInMapRouterEscapeHandler: Router {
+    func didDeinit()
+}
 
 class FindChargersInMapRouter: FindChargersInMapRouterProtocol {
     private let parentCoordinator: FindChargersInMapRouterEscapeHandler
     private weak var rootViewController: UINavigationController?
+    
+    deinit {
+        parentCoordinator.didDeinit()
+    }
     
     public init(parentCoordinator: FindChargersInMapRouterEscapeHandler, rootViewController: UINavigationController) {
         self.parentCoordinator = parentCoordinator

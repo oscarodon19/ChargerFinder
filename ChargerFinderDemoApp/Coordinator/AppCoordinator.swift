@@ -5,10 +5,12 @@
 //  Created by Oscar Odon on 23/04/2020.
 //  Copyright © 2020 Oscar Odon. All rights reserved.
 //
+
 import UIKit
 import ChargerFinder
+import FirebaseAuth
 
-class AppCoordinator: Coordinator {
+class AppCoordinator: Router {
     private let window: UIWindow
     private var rootViewController: UINavigationController?
     
@@ -20,17 +22,17 @@ class AppCoordinator: Coordinator {
         rootViewController = UINavigationController(rootViewController: UIViewController())
         rootViewController?.setTranslucentNavigationBar()
         guard let navigationController = rootViewController else { return }
-        let mainCoordinator = MainViewCoordinator(
-            parentCoordinator: self,
+        let mainRouter = LoginViewRouter(
+            parentRouter: self,
             rootViewController: navigationController
         )
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
-        mainCoordinator.start()
+        mainRouter.start()
     }
 }
 
-extension AppCoordinator: MainViewCoordinatorScapeHandler {
+extension AppCoordinator: LoginViewRouterScapeHandler {
     func handleChargerFinderNavigation() {
         guard let navigationController = rootViewController else { return }
         let chargerFinderCoordinator = ChargerFinderCoordinator(
@@ -40,4 +42,13 @@ extension AppCoordinator: MainViewCoordinatorScapeHandler {
     }
 }
 
-extension AppCoordinator: ChargerFinderCoordinatorEscapeHandler {}
+extension AppCoordinator: ChargerFinderCoordinatorEscapeHandler {
+    func didEndModuleFlow() {
+        guard let user = Auth.auth().currentUser else { return }
+        do {
+            try Auth.auth().signOut()
+        } catch (let error) {
+            print("Auth sign out failed: \(error)")
+        }
+    }
+}

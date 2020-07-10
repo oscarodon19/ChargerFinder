@@ -9,8 +9,8 @@
 import UIKit
 import CoreLocation
 
-protocol FindChargersWithARRouterProtocol: AnyObject, Coordinator {}
-protocol FindChargersWithARRouterEscapeHandler: Coordinator {}
+protocol FindChargersWithARRouterProtocol: AnyObject, Router {}
+protocol FindChargersWithARRouterEscapeHandler: Router {}
 
 class FindChargersWithARRouter: FindChargersWithARRouterProtocol {
     private let parentRouter: FindChargersWithARRouterEscapeHandler

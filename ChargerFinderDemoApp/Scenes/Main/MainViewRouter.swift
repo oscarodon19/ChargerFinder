@@ -8,19 +8,19 @@
 
 import ChargerFinder
 
-protocol MainViewCoordinatorProtocol: AnyObject, Coordinator {
+protocol MainViewRouterProtocol: AnyObject, Router {
     func handleChargerFinderPush()
 }
-protocol MainViewCoordinatorScapeHandler: Coordinator {
+protocol MainViewRouterScapeHandler: Router {
     func handleChargerFinderNavigation()
 }
 
-class MainViewCoordinator: MainViewCoordinatorProtocol {
-    private let parentCoordinator: MainViewCoordinatorScapeHandler
+class MainViewRouter: MainViewRouterProtocol {
+    private let parentRouter: MainViewRouterScapeHandler
     private weak var rootViewController: UINavigationController?
     
-    init(parentCoordinator: MainViewCoordinatorScapeHandler, rootViewController: UINavigationController) {
-        self.parentCoordinator = parentCoordinator
+    init(parentRouter: MainViewRouterScapeHandler, rootViewController: UINavigationController) {
+        self.parentRouter = parentRouter
         self.rootViewController = rootViewController
     }
     
@@ -30,6 +30,6 @@ class MainViewCoordinator: MainViewCoordinatorProtocol {
     }
     
     func handleChargerFinderPush() {
-        parentCoordinator.handleChargerFinderNavigation()
+        parentRouter.handleChargerFinderNavigation()
     }
 }

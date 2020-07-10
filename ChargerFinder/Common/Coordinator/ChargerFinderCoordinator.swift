@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 
-protocol ChargerFinderCoordinatorProtocol: AnyObject, Coordinator {}
-public protocol ChargerFinderCoordinatorEscapeHandler: Coordinator {}
+protocol ChargerFinderCoordinatorProtocol: AnyObject, Router {}
+public protocol ChargerFinderCoordinatorEscapeHandler: Router {
+    func didEndModuleFlow()
+}
 
 public class ChargerFinderCoordinator: ChargerFinderCoordinatorProtocol {
     private let parentCoordinator: ChargerFinderCoordinatorEscapeHandler
@@ -28,4 +30,8 @@ public class ChargerFinderCoordinator: ChargerFinderCoordinatorProtocol {
     }
 }
 
-extension ChargerFinderCoordinator: FindChargersInMapRouterEscapeHandler {}
+extension ChargerFinderCoordinator: FindChargersInMapRouterEscapeHandler {
+    func didDeinit() {
+        parentCoordinator.didEndModuleFlow()
+    }
+}
