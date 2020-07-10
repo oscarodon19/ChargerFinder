@@ -19,6 +19,8 @@
 		F465327D24B2995100B865C8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465327C24B2995100B865C8 /* User.swift */; };
 		F465328E24B802A000B865C8 /* LoginViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465328D24B802A000B865C8 /* LoginViewRouter.swift */; };
 		F465329224B8058900B865C8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465328F24B8056400B865C8 /* LoginViewController.swift */; };
+		F465329524B824FB00B865C8 /* ChargerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465329424B824FB00B865C8 /* ChargerDetailViewController.swift */; };
+		F465329724B8250D00B865C8 /* ChargerDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465329624B8250D00B865C8 /* ChargerDetailRouter.swift */; };
 		F469630024528109001B58D9 /* UINavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46962FF24528108001B58D9 /* UINavigationBarExtension.swift */; };
 		F4696302245282C1001B58D9 /* UINAvigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4696301245282C1001B58D9 /* UINAvigationControllerExtension.swift */; };
 		F4696304245501FC001B58D9 /* ChargerFinderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4696303245501FC001B58D9 /* ChargerFinderCoordinator.swift */; };
@@ -102,6 +104,8 @@
 		F465327C24B2995100B865C8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F465328D24B802A000B865C8 /* LoginViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewRouter.swift; sourceTree = "<group>"; };
 		F465328F24B8056400B865C8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F465329424B824FB00B865C8 /* ChargerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerDetailViewController.swift; sourceTree = "<group>"; };
+		F465329624B8250D00B865C8 /* ChargerDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerDetailRouter.swift; sourceTree = "<group>"; };
 		F46962FF24528108001B58D9 /* UINavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarExtension.swift; sourceTree = "<group>"; };
 		F4696301245282C1001B58D9 /* UINAvigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINAvigationControllerExtension.swift; sourceTree = "<group>"; };
 		F4696303245501FC001B58D9 /* ChargerFinderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerFinderCoordinator.swift; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 		F45857402443F17E00147E84 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F465329324B824DA00B865C8 /* ChargerDetail */,
 				F47D4E9224675CEB006E0399 /* FindChargersInMap */,
 				F45857412443F19B00147E84 /* FindChargersWithAR */,
 			);
@@ -304,6 +309,15 @@
 				F458576324526BB900147E84 /* MainViewRouter.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		F465329324B824DA00B865C8 /* ChargerDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F465329424B824FB00B865C8 /* ChargerDetailViewController.swift */,
+				F465329624B8250D00B865C8 /* ChargerDetailRouter.swift */,
+			);
+			path = ChargerDetail;
 			sourceTree = "<group>";
 		};
 		F47D4E9224675CEB006E0399 /* FindChargersInMap */ = {
@@ -724,6 +738,7 @@
 				F47D4ED22470ADD9006E0399 /* ChargersInteractor.swift in Sources */,
 				F47D4EDE2479D58D006E0399 /* CustomTableViewCell.swift in Sources */,
 				F47D4E9424675D60006E0399 /* FindChargersInMapViewController.swift in Sources */,
+				F465329724B8250D00B865C8 /* ChargerDetailRouter.swift in Sources */,
 				F4585753245254CB00147E84 /* StringExtension.swift in Sources */,
 				F47D4E9C24678537006E0399 /* FindChargersInMapPresenter.swift in Sources */,
 				F458575024524C6000147E84 /* ProgrammaticallyLayoutable.swift in Sources */,
@@ -741,6 +756,7 @@
 				F4696306245507B8001B58D9 /* FindChargersWithARRouter.swift in Sources */,
 				F4585756245255B500147E84 /* Math.swift in Sources */,
 				F47D4ED82470E33D006E0399 /* LoadingView.swift in Sources */,
+				F465329524B824FB00B865C8 /* ChargerDetailViewController.swift in Sources */,
 				F47D4ECA2468A12F006E0399 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

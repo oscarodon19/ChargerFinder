@@ -37,6 +37,7 @@ class FindChargersInMapViewController: UIViewController, Loadable {
         let view = UIStackView()
         view.axis = .vertical
         view.distribution = .fill
+        view.spacing = 14
         view.isLayoutMarginsRelativeArrangement = true
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -54,6 +55,24 @@ class FindChargersInMapViewController: UIViewController, Loadable {
         button.addTarget(self, action: #selector(handleAugmentedRealityButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
+    }()
+    
+    private lazy var containerView: UIStackView = {
+       let view = UIStackView()
+       view.axis = .vertical
+       view.distribution = .fill
+       view.layoutMargins = UIEdgeInsets(top: 0, left: 13, bottom: 0, right: 0)
+       view.isLayoutMarginsRelativeArrangement = true
+       view.translatesAutoresizingMaskIntoConstraints = false
+       return view
+    }()
+    
+    private lazy var tableTitle: UILabel = {
+        let label = UILabel()
+        label.text = "Nearby Chargers"
+        label.font = .boldSystemFont(ofSize: 28)
+        label.textColor = UIColor.appColor(.title)
+        return label
     }()
     
     private lazy var tableView: UITableView = {
@@ -136,7 +155,9 @@ extension FindChargersInMapViewController: Locatable {
 extension FindChargersInMapViewController: ProgrammaticallyLayoutable {
     func setupViewHierarchy() {
         mapView.addSubview(augmentedRealityButton)
+        containerView.addArrangedSubview(tableTitle)
         stackView.addArrangedSubview(mapView)
+        stackView.addArrangedSubview(containerView)
         stackView.addArrangedSubview(tableView)
         view.addSubview(stackView)
     }
