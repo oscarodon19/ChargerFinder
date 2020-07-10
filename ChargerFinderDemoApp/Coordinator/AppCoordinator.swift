@@ -44,7 +44,6 @@ extension AppCoordinator: LoginViewRouterScapeHandler {
 
 extension AppCoordinator: ChargerFinderCoordinatorEscapeHandler {
     func didEndModuleFlow() {
-        guard let user = Auth.auth().currentUser else { return }
         do {
             try Auth.auth().signOut()
         } catch (let error) {
