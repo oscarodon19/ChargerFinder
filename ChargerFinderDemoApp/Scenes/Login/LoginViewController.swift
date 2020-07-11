@@ -57,7 +57,10 @@ class LoginViewController: UIViewController {
     private lazy var signupButton: UIButton = {
         let button = UIButton()
         button.setTitle(String.signup, for: .normal)
+        button.showsTouchWhenHighlighted = true
         button.setTitleColor(.systemBlue, for: .normal)
+        button.layer.borderColor = UIColor.systemBlue.cgColor
+        button.layer.borderWidth = 1
         button.addTarget(self, action: #selector(signUpDidTouch), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -133,12 +136,12 @@ extension LoginViewController {
                                        style: .cancel)
       
         alert.addTextField { textEmail in
-            textEmail.placeholder = "Enter your email"
+            textEmail.placeholder = String.enterEmail
         }
           
         alert.addTextField { textPassword in
             textPassword.isSecureTextEntry = true
-            textPassword.placeholder = "Enter your password"
+            textPassword.placeholder = String.enterPassword
         }
           
         alert.addAction(saveAction)
@@ -176,6 +179,7 @@ extension LoginViewController: ProgrammaticallyLayoutable {
             signupButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 16),
             signupButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 54),
             signupButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -54),
+            signupButton.heightAnchor.constraint(equalToConstant: 40),
         ])
     }
     
@@ -207,4 +211,6 @@ fileprivate extension String {
     static let signinFailed = "Sign In Failed"
     static let emailPlaceholder = "Email"
     static let passwordPlaceholder = "Password"
+    static let enterEmail = "Enter your email"
+    static let enterPassword = "Enter your password"
 }

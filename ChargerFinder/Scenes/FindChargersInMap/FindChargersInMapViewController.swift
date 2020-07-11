@@ -29,7 +29,7 @@ class FindChargersInMapViewController: UIViewController, Loadable {
     private let router: FindChargersInMapRouterProtocol
     private var presenter: FindChargersPresenterProtocol
     private let regionInMeters: Double = 10000
-    private var chargers = [Charger]()
+    private var viewModel = [Charger]()
     
     
     //MARK: - UIComponents
@@ -123,9 +123,9 @@ extension FindChargersInMapViewController {
 //MARK: - ChargersDisplayable
 extension FindChargersInMapViewController: ChargersDisplayable {
     func displayFetchedChargers(with viewModel: [Charger]) {
-        chargers = viewModel
+        self.viewModel = viewModel
         self.tableView.reloadData()
-        createAnnotations(for: chargers)
+        createAnnotations(for: viewModel)
         dismissLoading()
     }
 }
@@ -185,14 +185,14 @@ extension FindChargersInMapViewController: ProgrammaticallyLayoutable {
 //MARK: - TableDataSourceDelegate
 extension FindChargersInMapViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let title = chargers[indexPath.section].name
-        let detail = chargers[indexPath.section].description
+        let title = viewModel[indexPath.section].name
+        let detail = viewModel[indexPath.section].description
         let cell = CustomTableViewCell(title: title, detail: detail, style: .subtitle, reuseIdentifier: "cell")
         return cell
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return chargers.count
+        return viewModel.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -217,6 +217,7 @@ extension FindChargersInMapViewController: UITableViewDataSource {
 //MARK: - TableViewDelegate
 extension FindChargersInMapViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //TODO: Implement logic to navigate to detail view
+        tableView.deselectRow(at: indexPath, animated: true)
+        router.showChargerDetail(viewModel[indexPath.section])
     }
 }

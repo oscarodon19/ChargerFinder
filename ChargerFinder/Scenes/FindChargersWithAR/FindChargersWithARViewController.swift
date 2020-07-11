@@ -11,9 +11,10 @@ import ARKit
 import CoreLocation
 import GameplayKit
 
-class FindChargersWithARViewController: UIViewController {
+class FindChargersWithARViewController: UIViewController, Loadable {
     private let router: FindChargersWithARRouter
     private var presenter: FindChargersPresenterProtocol
+    var loadingView: LoadingView?
     var userLocation: CLLocation
     var viewModel: [Charger]?
     var userHeading = 0.0
@@ -42,6 +43,7 @@ class FindChargersWithARViewController: UIViewController {
         setupView()
         presenter.setViewDelegate(self)
         presenter.viewDidStart()
+        displayLoading()
         sceneView.delegate = self
         sceneView.showsFPS = true
         sceneView.showsNodeCount = true
@@ -66,6 +68,7 @@ class FindChargersWithARViewController: UIViewController {
 // MARK: - ChargersDisplayable
 extension FindChargersWithARViewController: ChargersDisplayable {
     func displayFetchedChargers(with viewModel: [Charger]) {
+        dismissLoading()
         self.viewModel = viewModel
     }
     
@@ -139,6 +142,8 @@ extension FindChargersWithARViewController: ARSKViewDelegate {
 extension FindChargersWithARViewController {
     func createSites() {
         guard let chargers = viewModel else { return }
+        if !sites.isEmpty { sites.removeAll(keepingCapacity: true) }
+
         for charger in chargers {
             //Ubicar latitud y longitud de los cargadores -> CLLocation
             let lat = charger.latitude

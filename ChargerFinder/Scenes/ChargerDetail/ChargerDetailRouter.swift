@@ -15,13 +15,16 @@ protocol ChargerDetailRouterEscapeHandler: Router {}
 class ChargerDetailRouter: ChargerDetailRouterProtocol {
     private let parentRouter: ChargerDetailRouterEscapeHandler
     private weak var rootViewController: UINavigationController?
+    private let viewModel: Charger
     
-    public init(parentRouter: ChargerDetailRouterEscapeHandler, rootViewController: UINavigationController) {
+    public init(parentRouter: ChargerDetailRouterEscapeHandler, rootViewController: UINavigationController, viewModel: Charger) {
         self.parentRouter = parentRouter
         self.rootViewController = rootViewController
+        self.viewModel = viewModel
     }
     
     public func start() {
-        
+        let chargerDetailViewController = ChargerDetailViewController(router: self, viewModel: viewModel)
+        rootViewController?.present(chargerDetailViewController, animated: true, completion: nil)
     }
 }

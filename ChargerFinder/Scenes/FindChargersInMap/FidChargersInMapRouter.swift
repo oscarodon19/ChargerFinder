@@ -11,13 +11,14 @@ import CoreLocation
 
 protocol FindChargersInMapRouterProtocol: AnyObject, Router {
     func showAugmentedRealityChargerFinderView()
+    func showChargerDetail(_ viewModel: Charger)
 }
 
 protocol FindChargersInMapRouterEscapeHandler: Router {
     func didDeinit()
 }
 
-class FindChargersInMapRouter: FindChargersInMapRouterProtocol {
+class FindChargersInMapRouter: FindChargersInMapRouterProtocol, ChargerDetailRouterEscapeHandler, FindChargersWithARRouterEscapeHandler {
     private let parentCoordinator: FindChargersInMapRouterEscapeHandler
     private weak var rootViewController: UINavigationController?
     
@@ -40,10 +41,13 @@ class FindChargersInMapRouter: FindChargersInMapRouterProtocol {
     
     func showAugmentedRealityChargerFinderView() {
         guard let navigationController = rootViewController else { return }
-        let findChargersWithARCoordinator = FindChargersWithARRouter(parentRouter: self, rootViewController: navigationController)
-        findChargersWithARCoordinator.start()
+        let findChargersWithARRouter = FindChargersWithARRouter(parentRouter: self, rootViewController: navigationController)
+        findChargersWithARRouter.start()
+    }
+    
+    func showChargerDetail(_ viewModel: Charger) {
+        guard let navigationController = rootViewController else { return }
+        let chargerDetailRouter = ChargerDetailRouter(parentRouter: self, rootViewController: navigationController, viewModel: viewModel)
+        chargerDetailRouter.start()
     }
 }
-
-extension FindChargersInMapRouter: FindChargersWithARRouterEscapeHandler {}
-
