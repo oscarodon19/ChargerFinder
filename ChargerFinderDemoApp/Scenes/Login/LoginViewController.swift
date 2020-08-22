@@ -14,13 +14,12 @@ class LoginViewController: UIViewController {
     
     private let router: LoginViewRouter
     
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = String.title
-        label.textColor = .systemBlue
-        label.font = .boldSystemFont(ofSize: 45)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    private lazy var logoImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "Logo")
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
     
     private lazy var emailTextfield: UITextField = {
@@ -153,7 +152,7 @@ extension LoginViewController {
 
 extension LoginViewController: ProgrammaticallyLayoutable {
     public func setupViewHierarchy() {
-        view.addSubview(titleLabel)
+        view.addSubview(logoImageView)
         view.addSubview(emailTextfield)
         view.addSubview(passwordTextfield)
         view.addSubview(loginButton)
@@ -162,9 +161,11 @@ extension LoginViewController: ProgrammaticallyLayoutable {
     
     public func setupConstraints() {
         NSLayoutConstraint.activate([
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 152),
-            emailTextfield.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 116),
+            logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 10),
+            logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 90),
+            logoImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.3),
+            logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor),
+            emailTextfield.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 40),
             emailTextfield.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 54),
             emailTextfield.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -54),
             emailTextfield.heightAnchor.constraint(equalToConstant: 40),
@@ -172,11 +173,11 @@ extension LoginViewController: ProgrammaticallyLayoutable {
             passwordTextfield.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 54),
             passwordTextfield.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -54),
             passwordTextfield.heightAnchor.constraint(equalToConstant: 40),
-            loginButton.topAnchor.constraint(equalTo: passwordTextfield.bottomAnchor, constant: 20),
+            loginButton.topAnchor.constraint(equalTo: passwordTextfield.bottomAnchor, constant: 25),
             loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 54),
             loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -54),
             loginButton.heightAnchor.constraint(equalToConstant: 40),
-            signupButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 16),
+            signupButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 8),
             signupButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 54),
             signupButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -54),
             signupButton.heightAnchor.constraint(equalToConstant: 40),
