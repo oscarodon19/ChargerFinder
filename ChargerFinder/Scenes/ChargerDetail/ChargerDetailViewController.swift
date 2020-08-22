@@ -176,13 +176,12 @@ extension ChargerDetailViewController: ProgrammaticallyLayoutable {
 }
 
 fileprivate extension String {
-    static let reserve = "Reserve"
-    static let fastCharge = "Fast charge"
-    static let solarPowered = "Solar powered"
-    static let plugType = "Plug type"
-    static let locationType = "Location type"
-    static let description = "Description"
-    static let address = "Address"
-    static let yes = "Yes"
-    static let no = "No"
+    static let yes = NSLocalizedString("yes", comment: "Yes string")
+    static let no = NSLocalizedString("no", comment: "No string")
+    static let fastCharge = NSLocalizedString("fastCharge", comment: "Fast charge title")
+    static let solarPowered = NSLocalizedString("solarPowered", comment: "Solar powered charger title")
+    static let plugType = NSLocalizedString("plugType", comment: "Charger plug type title")
+    static let locationType = NSLocalizedString("locationType", comment: "Charger location type title")
+    static let description = NSLocalizedString("description", comment: "Description title")
+    static let address = NSLocalizedString("address", comment: "Adress title")
 }

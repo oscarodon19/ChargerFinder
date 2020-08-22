@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  ChargerFinder
+
+  Created by Oscar Odon on 22/08/2020.
+  Copyright © 2020 Oscar Odon. All rights reserved.
+*/
+
+//General
+"chargerFinder" = "Charger Finder";
+"dismiss" = "Cancelar";
+"yes" = "Si";
+"no" = "No";
+
+//FindChargersInMap view controller text
+"nearbyChargers" = "Cargadores Cercanos";
+"locationAccessRequired" = "Acceso a Localización Requerido";
+"weNeedLocationAccess" = "Necesitamos acceso a tu localización para que puedas utilizar las funcionalidades del mapa";
+
+//ChargerDetail view controller strings
+"fastCharge" = "Carga Rápida";
+"solarPowered" = "Alimentado por Energía Solar";
+"plugType" = "Tipo de conector";
+"locationType" = "Tipo de locación";
+"description" = "Descripción";
+"address" = "Dirección";

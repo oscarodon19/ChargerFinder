@@ -69,7 +69,7 @@ class FindChargersInMapViewController: UIViewController, Loadable {
     
     private lazy var tableTitle: UILabel = {
         let label = UILabel()
-        label.text = "Nearby Chargers"
+        label.text = String.nearbyChargers
         label.font = .boldSystemFont(ofSize: 28)
         label.textColor = UIColor.appColor(.title)
         return label
@@ -139,8 +139,8 @@ extension FindChargersInMapViewController: Locatable {
     }
     
     func userDidNotAuthorizeLocation() {
-        let alert = UIAlertController(title: "Location Access Required", message: "We need location access permits to use maps features", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Dissmiss", style: .cancel, handler: nil))
+        let alert = UIAlertController(title: String.locationAccsessRequired, message: String.weNeedLocationAccess, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: String.dismiss, style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
@@ -178,7 +178,7 @@ extension FindChargersInMapViewController: ProgrammaticallyLayoutable {
     
     func setupAditionalConfigurations() {
         view.setSystemBackgroundColor()
-        navigationItem.title = "Charger Finder"
+        navigationItem.title = String.chargerFinder
     }
 }
 
@@ -220,4 +220,12 @@ extension FindChargersInMapViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         router.showChargerDetail(viewModel[indexPath.section])
     }
+}
+
+fileprivate extension String {
+    static let chargerFinder = NSLocalizedString("chargerFinder", comment: "app name")
+    static let locationAccsessRequired = NSLocalizedString("locationAccessRequired", comment: "Location Access title text")
+    static let weNeedLocationAccess = NSLocalizedString("weNeedLocationAccess", comment: "Location Access descrption text")
+    static let dismiss = NSLocalizedString("dismiss", comment: "Dismiss text for dismiss button")
+    static let nearbyChargers = NSLocalizedString("nearbyChargers", comment: "Nearby Chargers title")
 }
