@@ -11,7 +11,6 @@ import ChargerFinder
 import FirebaseAuth
 
 class LoginViewController: UIViewController {
-    
     private let router: LoginViewRouter
     
     private lazy var logoImageView: UIImageView = {
@@ -44,12 +43,8 @@ class LoginViewController: UIViewController {
         return textField
     }()
     
-    private lazy var loginButton: UIButton = {
-        let button = UIButton()
-        button.setTitle(String.login, for: .normal)
-        button.backgroundColor = .systemBlue
-        button.addTarget(self, action: #selector(loginDidTouch), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
+    private lazy var loginButton: FilledButton = {
+        let button = FilledButton(text: String.login, delegate: self)
         return button
     }()
     
@@ -87,26 +82,28 @@ class LoginViewController: UIViewController {
     }
 }
 
-extension LoginViewController {
-    @objc func loginDidTouch(_ sender: AnyObject) {
+extension LoginViewController: FilledButtonDelegate {
+    func didTapButton(_ sender: FilledButton) {
         guard
-            let email = emailTextfield.text,
-            let password = passwordTextfield.text,
-            email.count > 0,
-            password.count > 0
-            else { return }
-      
-        Auth.auth().signIn(withEmail: email, password: password) { user, error in
-            if let error = error, user == nil {
-                let alert = UIAlertController(title: String.signinFailed,
-                                                message: error.localizedDescription,
-                                                preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: String.ok, style: .default))
-                self.present(alert, animated: true, completion: nil)
-            }
-        }
+              let email = emailTextfield.text,
+              let password = passwordTextfield.text,
+              email.count > 0,
+              password.count > 0
+              else { return }
+        
+          Auth.auth().signIn(withEmail: email, password: password) { user, error in
+              if let error = error, user == nil {
+                  let alert = UIAlertController(title: String.signinFailed,
+                                                  message: error.localizedDescription,
+                                                  preferredStyle: .alert)
+                  alert.addAction(UIAlertAction(title: String.ok, style: .default))
+                  self.present(alert, animated: true, completion: nil)
+              }
+          }
     }
-    
+}
+
+extension LoginViewController {
     @objc func signUpDidTouch(_ sender: AnyObject) {
         let alert = UIAlertController(title: String.register, message: String.register, preferredStyle: .alert)
         let saveAction = UIAlertAction(title: String.save, style: .default) { _ in

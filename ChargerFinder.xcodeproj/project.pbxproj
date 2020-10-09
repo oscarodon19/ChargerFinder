@@ -26,6 +26,7 @@
 		F4696304245501FC001B58D9 /* ChargerFinderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4696303245501FC001B58D9 /* ChargerFinderCoordinator.swift */; };
 		F4696306245507B8001B58D9 /* FindChargersWithARRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4696305245507B8001B58D9 /* FindChargersWithARRouter.swift */; };
 		F469636B2455F277001B58D9 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F46C00132513D244005FE9C2 /* FilledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46C00122513D244005FE9C2 /* FilledButton.swift */; };
 		F47D4E9424675D60006E0399 /* FindChargersInMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D4E9324675D60006E0399 /* FindChargersInMapViewController.swift */; };
 		F47D4E952467621E006E0399 /* ChargerFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D56B862440E76100A4B8C0 /* ChargerFinder.framework */; };
 		F47D4E962467621E006E0399 /* ChargerFinder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4D56B862440E76100A4B8C0 /* ChargerFinder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -115,6 +116,7 @@
 		F4696303245501FC001B58D9 /* ChargerFinderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargerFinderCoordinator.swift; sourceTree = "<group>"; };
 		F4696305245507B8001B58D9 /* FindChargersWithARRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindChargersWithARRouter.swift; sourceTree = "<group>"; };
 		F46963682455F265001B58D9 /* ChargerFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChargerFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F46C00122513D244005FE9C2 /* FilledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButton.swift; sourceTree = "<group>"; };
 		F47D4E9324675D60006E0399 /* FindChargersInMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindChargersInMapViewController.swift; sourceTree = "<group>"; };
 		F47D4E992467675E006E0399 /* FidChargersInMapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FidChargersInMapRouter.swift; sourceTree = "<group>"; };
 		F47D4E9B24678537006E0399 /* FindChargersInMapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindChargersInMapPresenter.swift; sourceTree = "<group>"; };
@@ -325,6 +327,14 @@
 			path = ChargerDetail;
 			sourceTree = "<group>";
 		};
+		F46C00112513D22E005FE9C2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F46C00122513D244005FE9C2 /* FilledButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F47D4E9224675CEB006E0399 /* FindChargersInMap */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,6 +441,7 @@
 		F4D56BA52440E93E00A4B8C0 /* ChargerFinderDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				F46C00112513D22E005FE9C2 /* Views */,
 				F465328024B29A9B00B865C8 /* Scenes */,
 				F454E7F724527DDC00C02E44 /* Extensions */,
 				F4585761245265BC00147E84 /* Coordinator */,
@@ -768,6 +779,7 @@
 			files = (
 				F458576424526BB900147E84 /* MainViewRouter.swift in Sources */,
 				F458575B2452622F00147E84 /* AppCoordinator.swift in Sources */,
+				F46C00132513D244005FE9C2 /* FilledButton.swift in Sources */,
 				F4D56BAB2440E93E00A4B8C0 /* MainViewController.swift in Sources */,
 				F4696302245282C1001B58D9 /* UINAvigationControllerExtension.swift in Sources */,
 				F465329224B8058900B865C8 /* LoginViewController.swift in Sources */,
@@ -820,6 +832,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2EED647685197AD78FCEC17C /* Pods-ChargerFinder-ChargerFinderTests.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9P94BC28FM;
 				INFOPLIST_FILE = ChargerFinderTests/Info.plist;
@@ -831,6 +845,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.oscarodon.ChargerFinderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -840,6 +856,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 66CE40E537283917872FA0BA /* Pods-ChargerFinder-ChargerFinderTests.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9P94BC28FM;
 				INFOPLIST_FILE = ChargerFinderTests/Info.plist;
@@ -851,6 +869,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.oscarodon.ChargerFinderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -983,10 +1003,10 @@
 			baseConfigurationReference = 760A8097A0FF62D2777B08F7 /* Pods-ChargerFinder.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 9P94BC28FM;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1015,10 +1035,10 @@
 			baseConfigurationReference = 63DC7F45162220C822FF3F42 /* Pods-ChargerFinder.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 9P94BC28FM;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
